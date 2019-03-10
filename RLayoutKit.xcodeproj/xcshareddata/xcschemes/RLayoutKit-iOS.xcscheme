@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "9999"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "RLayoutKit::RLayoutKit"
+               BlueprintIdentifier = "B0CF99BA22350F3E00FB200E"
                BuildableName = "RLayoutKit.framework"
-               BlueprintName = "RLayoutKit-macOS"
+               BlueprintName = "RLayoutKit-iOS"
                ReferencedContainer = "container:RLayoutKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "RLayoutKit::RLayoutKitTests"
-               BuildableName = "RLayoutKitTests.xctest"
-               BlueprintName = "RLayoutKitTests"
-               ReferencedContainer = "container:RLayoutKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -55,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "RLayoutKit::RLayoutKit"
+            BlueprintIdentifier = "B0CF99BA22350F3E00FB200E"
             BuildableName = "RLayoutKit.framework"
-            BlueprintName = "RLayoutKit-macOS"
+            BlueprintName = "RLayoutKit-iOS"
             ReferencedContainer = "container:RLayoutKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -70,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B0CF99BA22350F3E00FB200E"
+            BuildableName = "RLayoutKit.framework"
+            BlueprintName = "RLayoutKit-iOS"
+            ReferencedContainer = "container:RLayoutKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -3,6 +3,7 @@
 
 import PackageDescription
 
+// swiftlint:disable trailing_comma line_length
 let package = Package(
     name: "RLayoutKit",
     products: [

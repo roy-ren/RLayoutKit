@@ -1,6 +1,8 @@
 import XCTest
 @testable import RLayoutKit
 
+// swiftlint:disable trailing_comma
+
 final class RLayoutKitTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.

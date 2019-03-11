@@ -35,27 +35,6 @@ public struct AnchorWapper<Base> {
     }
 }
 
-// MARK: AnchorCombination
-extension AnchorWapper {
-    /**
-     Anchor information, an anchor with constant or mutiplier
-     
-     1. constant: just with constant
-     2. multiplier: just with mutiplier
-     3. multiplierAndConstant: with a mutilpier and a constant
-     ````
-     public static func + (lsh: AnchorWapper<Base>, rsh: CGFloat) -> AnchorWapper.AnchorCombination<Base> {
-     return .constant(anchor: lsh.base, constant: rsh)
-     }
-     ````
-     */
-    public enum LayoutAnchorCombination<Base> {
-        case constant(anchor: Base, constant: CGFloat)
-        case multiplier(anchor: Base, multiplier: CGFloat)
-        case multiplierAndConstant(anchor: Base, multiplier: CGFloat, constant: CGFloat)
-    }
-}
-
 /**
  A protocol followed by subclasses of type
  [NSLayoutAnchor](https://developer.apple.com/documentation/uikit/nslayoutconstraint)
@@ -75,5 +54,17 @@ extension AnchorCompatible {
     /// An instance of type `Self` wrapped with an `AnchorWapper` container
     var anchor: AnchorWapper<Self> {
         return AnchorWapper<Self>(self)
+    }
+}
+
+extension NSLayoutConstraint {
+    var active: NSLayoutConstraint {
+        isActive = true
+        return self
+    }
+    
+    var inactive: NSLayoutConstraint {
+        isActive = false
+        return self
     }
 }

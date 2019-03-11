@@ -16,93 +16,117 @@ import UIKit
 extension NSLayoutDimension: AnchorCompatible {}
 
 extension AnchorWapper where Base: NSLayoutDimension {
+    @discardableResult
     public static func == (lsh: AnchorWapper<Base>,
-                           rsh: CGFloat) {
-        lsh.base
+                           rsh: CGFloat) -> NSLayoutConstraint {
+        return lsh.base
             .constraint(equalToConstant: rsh)
-            .isActive = true
+            .active
     }
     
+    @discardableResult
     public static func >= (lsh: AnchorWapper<Base>,
-                           rsh: CGFloat) {
-        lsh.base
+                           rsh: CGFloat) -> NSLayoutConstraint {
+        return lsh.base
             .constraint(greaterThanOrEqualToConstant: rsh)
-            .isActive = true
+            .active
     }
     
+    @discardableResult
     public static func <= (lsh: AnchorWapper<Base>,
-                           rsh: CGFloat) {
-        lsh.base
+                           rsh: CGFloat) -> NSLayoutConstraint {
+        return lsh.base
             .constraint(lessThanOrEqualToConstant: rsh)
-            .isActive = true
+            .active
     }
     
+    @discardableResult
     public static func * (lsh: AnchorWapper<Base>,
                           rsh: CGFloat) -> LayoutAnchorCombination<Base> {
         return .multiplier(anchor: lsh.base,
                            multiplier: rsh)
     }
     
-    public static func - (lsh: AnchorWapper<Base>,
+    @discardableResult
+    public static func + (lsh: AnchorWapper<Base>,
                           rsh: CGFloat) -> LayoutAnchorCombination<Base> {
         return .constant(anchor: lsh.base,
                          constant: rsh)
     }
     
+    @discardableResult
+    public static func - (lsh: AnchorWapper<Base>,
+                          rsh: CGFloat) -> LayoutAnchorCombination<Base> {
+        return .constant(anchor: lsh.base,
+                         constant: -rsh)
+    }
+    
+    @discardableResult
     public static func == (lsh: AnchorWapper<Base>,
-                           rsh: LayoutAnchorCombination<Base>) {
+                           rsh: LayoutAnchorCombination<Base>) -> NSLayoutConstraint {
         switch rsh {
+        case let .constant(dimension, constant):
+            return lsh.base
+                .constraint(equalTo: dimension,
+                            multiplier: 0,
+                            constant: constant)
         case let .multiplier(dimension, multiplier):
-            lsh.base
+            return lsh.base
                 .constraint(equalTo: dimension,
                             multiplier: multiplier)
-                .isActive = true
+                .active
         case let .multiplierAndConstant(dimension, multiplier, constant):
-            lsh.base
+            return lsh.base
                 .constraint(equalTo: dimension,
                             multiplier: multiplier,
                             constant: constant)
-                .isActive = true
-        default:
-            return
+                .active
         }
     }
     
+    @discardableResult
     public static func >= (lsh: AnchorWapper<Base>,
-                           rsh: AnchorWapper.LayoutAnchorCombination<Base>) {
+                           rsh: LayoutAnchorCombination<Base>) -> NSLayoutConstraint {
         switch rsh {
+        case let .constant(dimension, constant):
+            return lsh.base
+                .constraint(greaterThanOrEqualTo: dimension,
+                            multiplier: 0,
+                            constant: constant)
         case let .multiplier(dimension, multiplier):
-            lsh.base
+            return lsh.base
                 .constraint(greaterThanOrEqualTo: dimension,
                             multiplier: multiplier)
-                .isActive = true
+                .active
         case let .multiplierAndConstant(dimension, multiplier, constant):
-            lsh.base
+            return lsh.base
                 .constraint(greaterThanOrEqualTo: dimension,
                             multiplier: multiplier,
                             constant: constant)
-                .isActive = true
-        default:
-            return
+                .active
         }
     }
     
+    @discardableResult
     public static func <= (lsh: AnchorWapper<Base>,
-                           rsh: AnchorWapper.LayoutAnchorCombination<Base>) {
+                           rsh: LayoutAnchorCombination<Base>) -> NSLayoutConstraint {
         switch rsh {
+        case let .constant(dimension, constant):
+            return lsh.base
+                .constraint(lessThanOrEqualTo: dimension,
+                            multiplier: 0,
+                            constant: constant)
         case let .multiplier(dimension, multiplier):
-            lsh.base
+            return lsh.base
                 .constraint(lessThanOrEqualTo: dimension,
                             multiplier: multiplier)
-                .isActive = true
+                .active
         case let .multiplierAndConstant(dimension, multiplier, constant):
-            lsh.base
+            return lsh.base
                 .constraint(lessThanOrEqualTo: dimension,
                             multiplier: multiplier,
                             constant: constant)
-                .isActive = true
-        default:
-            return
+                .active
         }
     }
 }

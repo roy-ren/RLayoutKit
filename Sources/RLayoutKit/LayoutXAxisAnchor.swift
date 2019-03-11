@@ -23,118 +23,135 @@ extension AnchorWapper where Base: NSLayoutXAxisAnchor {
      This method returns an estimate.
      Use `reallyAccurateReading` to get the best results.
      */
-    func test() {
-        
-    }
-    /**
-     An example of using the note field
-     
-     - Note:
-     This method returns an estimate.
-     Use `reallyAccurateReading` to get the best results.
-     */
+    @discardableResult
     public static func == (lsh: AnchorWapper<Base>,
-                           rsh: AnchorWapper<Base>) {
-        lsh.base
+                           rsh: AnchorWapper<Base>) -> NSLayoutConstraint {
+        return lsh.base
             .constraint(equalTo: rsh.base)
-            .isActive = true
+            .active
     }
     
+    @discardableResult
     public static func >= (lsh: AnchorWapper<Base>,
-                           rsh: AnchorWapper<Base>) {
-        lsh.base
+                           rsh: AnchorWapper<Base>) -> NSLayoutConstraint {
+        return lsh.base
             .constraint(greaterThanOrEqualTo: rsh.base)
-            .isActive = true
+            .active
     }
     
+    @discardableResult
     public static func <= (lsh: AnchorWapper<Base>,
-                           rsh: AnchorWapper<Base>) {
-        lsh.base
+                           rsh: AnchorWapper<Base>) -> NSLayoutConstraint {
+        return lsh.base
             .constraint(lessThanOrEqualTo: rsh.base)
-            .isActive = true
+            .active
     }
     
+    @discardableResult
     public static func == (lsh: AnchorWapper<Base>,
-                           rsh: LayoutAnchorCombination<Base>) {
+                           rsh: LayoutAnchorCombination<Base>) -> NSLayoutConstraint? {
         switch rsh {
         case let .constant(anchor, constant):
-            lsh.base
+            return lsh.base
                 .constraint(equalTo: anchor,
                             constant: constant)
-                .isActive = true
+                .active
         case let .multiplier(anchor, multiplier):
+            #if os(iOS)
             if #available(iOS 11.0, *) {
-                lsh.base
+                return lsh.base
                     .constraint(equalToSystemSpacingAfter: anchor,
                                 multiplier: multiplier)
-                    .isActive = true
+                    .active
             }
+            #endif
         default:
-            return
+            break
         }
+        
+        return nil
     }
     
+    @discardableResult
     public static func >= (lsh: AnchorWapper<Base>,
-                           rsh: LayoutAnchorCombination<Base>) {
+                           rsh: LayoutAnchorCombination<Base>) -> NSLayoutConstraint? {
         switch rsh {
         case let .constant(anchor, constant):
-            lsh.base
+            return lsh.base
                 .constraint(greaterThanOrEqualTo: anchor,
                             constant: constant)
-                .isActive = true
+                .active
         case let .multiplier(anchor, multiplier):
+            #if os(iOS)
             if #available(iOS 11.0, *) {
-                lsh.base
+                return lsh.base
                     .constraint(greaterThanOrEqualToSystemSpacingAfter: anchor,
                                 multiplier: multiplier)
-                    .isActive = true
+                    .active
             }
+            #endif
         default:
-            return
+            break
         }
+        
+        return nil
     }
     
+    @discardableResult
     public static func <= (lsh: AnchorWapper<Base>,
-                           rsh: LayoutAnchorCombination<Base>) {
+                           rsh: LayoutAnchorCombination<Base>) -> NSLayoutConstraint? {
         switch rsh {
         case let .constant(anchor, constant):
-            lsh.base
+            return lsh.base
                 .constraint(lessThanOrEqualTo: anchor,
                             constant: constant)
-                .isActive = true
+                .active
         case let .multiplier(anchor, multiplier):
+            #if os(iOS)
             if #available(iOS 11.0, *) {
-                lsh.base
+                return lsh.base
                     .constraint(lessThanOrEqualToSystemSpacingAfter: anchor,
                                 multiplier: multiplier)
-                    .isActive = true
+                    .active
             }
+            #endif
         default:
-            return
+            break
         }
+        
+        return nil
     }
     
+    @discardableResult
     public static func + (lsh: AnchorWapper<Base>,
                           rsh: CGFloat) -> LayoutAnchorCombination<Base> {
         return .constant(anchor: lsh.base,
                          constant: rsh)
     }
     
+    @discardableResult
     public static func - (lsh: AnchorWapper<Base>,
                           rsh: CGFloat) -> LayoutAnchorCombination<Base> {
         return .constant(anchor: lsh.base,
-                         constant: rsh)
+                         constant: -rsh)
     }
     
+    #if os(iOS)
     @available(iOS 10.0, *)
+    @discardableResult
     public static func - (lsh: AnchorWapper<Base>,
                           rsh: AnchorWapper<Base>) -> AnchorWapper<NSLayoutDimension> {
-        return lsh.base.anchorWithOffset(to: rsh.base).anchor
+        return lsh.base
+            .anchorWithOffset(to: rsh.base)
+            .anchor
     }
     
     @available(iOS 11.0, *)
+    @discardableResult
     public static func * (lsh: AnchorWapper<Base>,
                           rsh: CGFloat) -> LayoutAnchorCombination<Base> {
-        return .multiplier(anchor: lsh.base, multiplier: rsh)
+        return .multiplier(anchor: lsh.base,
+                           multiplier: rsh)
     }
+    #endif
 }

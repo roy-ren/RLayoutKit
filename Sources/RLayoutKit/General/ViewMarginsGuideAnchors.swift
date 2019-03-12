@@ -14,70 +14,71 @@ import UIKit
 #endif
 
 #if os(iOS)
-extension RLayoutKitWapper where Base: View {
+extension RLayoutKitWrapper where Base: View {
+    
     var marginsGuide: UILayoutGuide {
         return base
             .layoutMarginsGuide
     }
     
-    public var marginsLeading: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var marginsLeading: AnchorWrapper<NSLayoutXAxisAnchor> {
         return marginsGuide
             .leadingAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsTrailing: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var marginsTrailing: AnchorWrapper<NSLayoutXAxisAnchor> {
         return marginsGuide
             .trailingAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsLeft: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var marginsLeft: AnchorWrapper<NSLayoutXAxisAnchor> {
         return marginsGuide
             .leftAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsRight: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var marginsRight: AnchorWrapper<NSLayoutXAxisAnchor> {
         return marginsGuide
             .rightAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsTop: AnchorWapper<NSLayoutYAxisAnchor> {
+    public var marginsTop: AnchorWrapper<NSLayoutYAxisAnchor> {
         return marginsGuide
             .topAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsBottom: AnchorWapper<NSLayoutYAxisAnchor> {
+    public var marginsBottom: AnchorWrapper<NSLayoutYAxisAnchor> {
         return marginsGuide
             .bottomAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsWidth: AnchorWapper<NSLayoutDimension> {
+    public var marginsWidth: AnchorWrapper<NSLayoutDimension> {
         return marginsGuide
             .widthAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsHeight: AnchorWapper<NSLayoutDimension> {
+    public var marginsHeight: AnchorWrapper<NSLayoutDimension> {
         return marginsGuide
             .heightAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsCenterX: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var marginsCenterX: AnchorWrapper<NSLayoutXAxisAnchor> {
         return marginsGuide
             .centerXAnchor
-            .anchor
+            .aw
     }
     
-    public var marginsCenterY: AnchorWapper<NSLayoutYAxisAnchor> {
+    public var marginsCenterY: AnchorWrapper<NSLayoutYAxisAnchor> {
         return marginsGuide
             .centerYAnchor
-            .anchor
+            .aw
     }
 }
 #endif

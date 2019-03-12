@@ -10,6 +10,7 @@
 		B082BA9022361C65001B370B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BA8F22361C65001B370B /* AppDelegate.swift */; };
 		B082BA9222361C66001B370B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B082BA9122361C66001B370B /* Assets.xcassets */; };
 		B082BA9522361C66001B370B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B082BA9322361C66001B370B /* MainMenu.xib */; };
+		B082BB1D22375BE0001B370B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB1C22375BE0001B370B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B082BA9622361C66001B370B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B082BA9722361C66001B370B /* RLayoutKitDemo_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RLayoutKitDemo_macOS.entitlements; sourceTree = "<group>"; };
 		B082BAA422361CA8001B370B /* RLayoutKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RLayoutKit.framework; path = "/Users/roy/Documents/Dev/Dev/Kits/RLayoutKit/RLayoutKitDemo iOS/../../../../../../Library/Developer/Xcode/DerivedData/RLayoutKit-exottlenjiwusodgmkmvijiuscqx/Build/Products/Debug-iphoneos/RLayoutKit.framework"; sourceTree = "<absolute>"; };
+		B082BB1C22375BE0001B370B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				B082BA9322361C66001B370B /* MainMenu.xib */,
 				B082BA9622361C66001B370B /* Info.plist */,
 				B082BA9722361C66001B370B /* RLayoutKitDemo_macOS.entitlements */,
+				B082BB1C22375BE0001B370B /* ViewController.swift */,
 			);
 			path = "RLayoutKitDemo macOS";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B082BB1D22375BE0001B370B /* ViewController.swift in Sources */,
 				B082BA9022361C65001B370B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

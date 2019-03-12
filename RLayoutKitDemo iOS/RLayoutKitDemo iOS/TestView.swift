@@ -17,6 +17,9 @@ class TestView: UILabel {
         backgroundColor = .black
         textColor = .white
         text = title
+        
+        layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 1
     }
     
     required init?(coder aDecoder: NSCoder) {

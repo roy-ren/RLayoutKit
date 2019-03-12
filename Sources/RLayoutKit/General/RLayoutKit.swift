@@ -1,6 +1,6 @@
 //
-//  RLayoutKitWapper.swift
-//  RLayoutKitWapper
+//  RLayoutKit.swift
+//  RLayoutKit
 //
 //  Created by roy on 2019/3/10.
 //
@@ -26,7 +26,8 @@ public typealias View = UIView
  let aWapper: RLayoutKitWapper<UIView> = view.rl
  ````
  */
-public struct RLayoutKitWapper<Base> {
+public struct RLayoutKitWrapper<Base> {
+    
     public let base: Base
     
     public init(_ base: Base) {
@@ -53,19 +54,19 @@ extension RLayoutCompatible {
     
     /// An instance of type `Self` wrapped with an `RLayoutKitWapper` container
     // swiftlint:disable identifier_name
-    public var rl: RLayoutKitWapper<Self> {
-        return RLayoutKitWapper<Self>(self)
+    public var rl: RLayoutKitWrapper<Self> {
+        return RLayoutKitWrapper<Self>(self)
     }
 }
 
-extension RLayoutKitWapper where Base: View {
+extension RLayoutKitWrapper where Base: View {
     
     /// Method of adding constraints to package base(View) of RLayoutKitWapper
     ///
     /// - Parameter constrainHandler: adding constraints closure
     /// - Returns: base(View)
     @discardableResult
-    public func layout(_ constrainHandler: (RLayoutKitWapper<Base>) -> Void) -> Base {
+    public func layout(_ constrainHandler: (RLayoutKitWrapper) -> Void) -> Base {
         base.translatesAutoresizingMaskIntoConstraints = false
         constrainHandler(base.rl)
         return base

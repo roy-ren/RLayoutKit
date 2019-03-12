@@ -21,24 +21,30 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B082BAB122363A70001B370B /* RLayoutKitWapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB022363A70001B370B /* RLayoutKitWapper.swift */; };
-		B082BAB222363A70001B370B /* RLayoutKitWapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB022363A70001B370B /* RLayoutKitWapper.swift */; };
 		B082BAB422363ACD001B370B /* ViewAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB322363ACD001B370B /* ViewAnchors.swift */; };
 		B082BAB522363ACD001B370B /* ViewAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB322363ACD001B370B /* ViewAnchors.swift */; };
 		B082BAB722363B22001B370B /* ViewMarginsGuideAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB622363B22001B370B /* ViewMarginsGuideAnchors.swift */; };
 		B082BAB822363B22001B370B /* ViewMarginsGuideAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB622363B22001B370B /* ViewMarginsGuideAnchors.swift */; };
 		B082BABA22363B69001B370B /* ViewSafeAreaAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB922363B69001B370B /* ViewSafeAreaAnchors.swift */; };
 		B082BABB22363B69001B370B /* ViewSafeAreaAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB922363B69001B370B /* ViewSafeAreaAnchors.swift */; };
-		B082BAC022364D5B001B370B /* LayoutAnchorCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BABF22364D5B001B370B /* LayoutAnchorCombination.swift */; };
-		B082BAC122364D5B001B370B /* LayoutAnchorCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BABF22364D5B001B370B /* LayoutAnchorCombination.swift */; };
+		B082BB172236A8C7001B370B /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB162236A8C7001B370B /* LayoutAnchor.swift */; };
+		B082BB182236A8C7001B370B /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB162236A8C7001B370B /* LayoutAnchor.swift */; };
+		B082BB1A2236BC46001B370B /* LayoutConstrainted.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB192236BC46001B370B /* LayoutConstrainted.swift */; };
+		B082BB1B2236BC46001B370B /* LayoutConstrainted.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB192236BC46001B370B /* LayoutConstrainted.swift */; };
+		B082BB1F22376AC1001B370B /* RLayoutKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB1E22376AC1001B370B /* RLayoutKit.swift */; };
+		B082BB2022376AC1001B370B /* RLayoutKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB1E22376AC1001B370B /* RLayoutKit.swift */; };
+		B082BB2C2237AB9C001B370B /* LayoutEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB2B2237AB9C001B370B /* LayoutEdge.swift */; };
+		B082BB2D2237AB9C001B370B /* LayoutEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB2B2237AB9C001B370B /* LayoutEdge.swift */; };
+		B082BB2F2237ABC3001B370B /* LayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB2E2237ABC3001B370B /* LayoutSize.swift */; };
+		B082BB302237ABC3001B370B /* LayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB2E2237ABC3001B370B /* LayoutSize.swift */; };
+		B082BB352237AF30001B370B /* LayoutPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB342237AF30001B370B /* LayoutPoint.swift */; };
+		B082BB362237AF30001B370B /* LayoutPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BB342237AF30001B370B /* LayoutPoint.swift */; };
 		B0CF99CD2235436D00FB200E /* LayoutXAxisAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99CC2235436D00FB200E /* LayoutXAxisAnchor.swift */; };
 		B0CF99CE2235436D00FB200E /* LayoutXAxisAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99CC2235436D00FB200E /* LayoutXAxisAnchor.swift */; };
 		B0CF99D02235439A00FB200E /* LayoutYAxisAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99CF2235439A00FB200E /* LayoutYAxisAnchor.swift */; };
 		B0CF99D12235439A00FB200E /* LayoutYAxisAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99CF2235439A00FB200E /* LayoutYAxisAnchor.swift */; };
 		B0CF99D322354C2C00FB200E /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99D222354C2C00FB200E /* LayoutDimension.swift */; };
 		B0CF99D422354C2C00FB200E /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99D222354C2C00FB200E /* LayoutDimension.swift */; };
-		B0CF99E22235509E00FB200E /* AnchorWapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99E12235509E00FB200E /* AnchorWapper.swift */; };
-		B0CF99E32235509E00FB200E /* AnchorWapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99E12235509E00FB200E /* AnchorWapper.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* RLayoutKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RLayoutKitTests.swift */; };
 		OBJ_41 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -63,16 +69,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B082BAB022363A70001B370B /* RLayoutKitWapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLayoutKitWapper.swift; sourceTree = "<group>"; };
 		B082BAB322363ACD001B370B /* ViewAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnchors.swift; sourceTree = "<group>"; };
 		B082BAB622363B22001B370B /* ViewMarginsGuideAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMarginsGuideAnchors.swift; sourceTree = "<group>"; };
 		B082BAB922363B69001B370B /* ViewSafeAreaAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSafeAreaAnchors.swift; sourceTree = "<group>"; };
-		B082BABF22364D5B001B370B /* LayoutAnchorCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchorCombination.swift; sourceTree = "<group>"; };
+		B082BB162236A8C7001B370B /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
+		B082BB192236BC46001B370B /* LayoutConstrainted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstrainted.swift; sourceTree = "<group>"; };
+		B082BB1E22376AC1001B370B /* RLayoutKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLayoutKit.swift; sourceTree = "<group>"; };
+		B082BB2B2237AB9C001B370B /* LayoutEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutEdge.swift; sourceTree = "<group>"; };
+		B082BB2E2237ABC3001B370B /* LayoutSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSize.swift; sourceTree = "<group>"; };
+		B082BB342237AF30001B370B /* LayoutPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutPoint.swift; sourceTree = "<group>"; };
 		B0CF99BB22350F3E00FB200E /* RLayoutKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RLayoutKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF99CC2235436D00FB200E /* LayoutXAxisAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutXAxisAnchor.swift; sourceTree = "<group>"; };
 		B0CF99CF2235439A00FB200E /* LayoutYAxisAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutYAxisAnchor.swift; sourceTree = "<group>"; };
 		B0CF99D222354C2C00FB200E /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
-		B0CF99E12235509E00FB200E /* AnchorWapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorWapper.swift; sourceTree = "<group>"; };
 		OBJ_12 /* RLayoutKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLayoutKitTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -106,14 +115,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B082BAAF22363A29001B370B /* RLayoutKitWapperEx */ = {
+		B082BAAF22363A29001B370B /* General */ = {
 			isa = PBXGroup;
 			children = (
+				B082BB1E22376AC1001B370B /* RLayoutKit.swift */,
+				B082BB162236A8C7001B370B /* LayoutAnchor.swift */,
 				B082BAB322363ACD001B370B /* ViewAnchors.swift */,
 				B082BAB622363B22001B370B /* ViewMarginsGuideAnchors.swift */,
 				B082BAB922363B69001B370B /* ViewSafeAreaAnchors.swift */,
 			);
-			path = RLayoutKitWapperEx;
+			path = General;
+			sourceTree = "<group>";
+		};
+		B082BB2122376E49001B370B /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B082BB192236BC46001B370B /* LayoutConstrainted.swift */,
+				B0CF99CC2235436D00FB200E /* LayoutXAxisAnchor.swift */,
+				B0CF99CF2235439A00FB200E /* LayoutYAxisAnchor.swift */,
+				B0CF99D222354C2C00FB200E /* LayoutDimension.swift */,
+				B082BB2B2237AB9C001B370B /* LayoutEdge.swift */,
+				B082BB2E2237ABC3001B370B /* LayoutSize.swift */,
+				B082BB342237AF30001B370B /* LayoutPoint.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -165,13 +190,8 @@
 		OBJ_8 /* RLayoutKit */ = {
 			isa = PBXGroup;
 			children = (
-				B082BAB022363A70001B370B /* RLayoutKitWapper.swift */,
-				B082BAAF22363A29001B370B /* RLayoutKitWapperEx */,
-				B0CF99E12235509E00FB200E /* AnchorWapper.swift */,
-				B082BABF22364D5B001B370B /* LayoutAnchorCombination.swift */,
-				B0CF99CC2235436D00FB200E /* LayoutXAxisAnchor.swift */,
-				B0CF99CF2235439A00FB200E /* LayoutYAxisAnchor.swift */,
-				B0CF99D222354C2C00FB200E /* LayoutDimension.swift */,
+				B082BAAF22363A29001B370B /* General */,
+				B082BB2122376E49001B370B /* Layout */,
 			);
 			name = RLayoutKit;
 			path = Sources/RLayoutKit;
@@ -351,15 +371,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B082BB302237ABC3001B370B /* LayoutSize.swift in Sources */,
 				B082BAB822363B22001B370B /* ViewMarginsGuideAnchors.swift in Sources */,
 				B0CF99CE2235436D00FB200E /* LayoutXAxisAnchor.swift in Sources */,
-				B082BAC122364D5B001B370B /* LayoutAnchorCombination.swift in Sources */,
+				B082BB362237AF30001B370B /* LayoutPoint.swift in Sources */,
 				B0CF99D422354C2C00FB200E /* LayoutDimension.swift in Sources */,
-				B082BAB222363A70001B370B /* RLayoutKitWapper.swift in Sources */,
+				B082BB2022376AC1001B370B /* RLayoutKit.swift in Sources */,
+				B082BB182236A8C7001B370B /* LayoutAnchor.swift in Sources */,
 				B082BAB522363ACD001B370B /* ViewAnchors.swift in Sources */,
-				B0CF99E32235509E00FB200E /* AnchorWapper.swift in Sources */,
 				B0CF99D12235439A00FB200E /* LayoutYAxisAnchor.swift in Sources */,
 				B082BABB22363B69001B370B /* ViewSafeAreaAnchors.swift in Sources */,
+				B082BB2D2237AB9C001B370B /* LayoutEdge.swift in Sources */,
+				B082BB1B2236BC46001B370B /* LayoutConstrainted.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,15 +390,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				B082BB2F2237ABC3001B370B /* LayoutSize.swift in Sources */,
 				B082BAB722363B22001B370B /* ViewMarginsGuideAnchors.swift in Sources */,
 				B0CF99CD2235436D00FB200E /* LayoutXAxisAnchor.swift in Sources */,
-				B082BAC022364D5B001B370B /* LayoutAnchorCombination.swift in Sources */,
+				B082BB352237AF30001B370B /* LayoutPoint.swift in Sources */,
 				B0CF99D322354C2C00FB200E /* LayoutDimension.swift in Sources */,
-				B082BAB122363A70001B370B /* RLayoutKitWapper.swift in Sources */,
+				B082BB1F22376AC1001B370B /* RLayoutKit.swift in Sources */,
+				B082BB172236A8C7001B370B /* LayoutAnchor.swift in Sources */,
 				B082BAB422363ACD001B370B /* ViewAnchors.swift in Sources */,
-				B0CF99E22235509E00FB200E /* AnchorWapper.swift in Sources */,
 				B0CF99D02235439A00FB200E /* LayoutYAxisAnchor.swift in Sources */,
 				B082BABA22363B69001B370B /* ViewSafeAreaAnchors.swift in Sources */,
+				B082BB2C2237AB9C001B370B /* LayoutEdge.swift in Sources */,
+				B082BB1A2236BC46001B370B /* LayoutConstrainted.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

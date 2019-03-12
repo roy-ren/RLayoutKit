@@ -10,7 +10,7 @@ import Foundation
 #if os(iOS)
 import UIKit
 
-extension RLayoutKitWapper where Base: View {
+extension RLayoutKitWrapper where Base: View {
     
     @available(iOS 11.0, *)
     public var safeAreaGuide: UILayoutGuide {
@@ -19,73 +19,73 @@ extension RLayoutKitWapper where Base: View {
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaLeading: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var safeAreaLeading: AnchorWrapper<NSLayoutXAxisAnchor> {
         return safeAreaGuide
             .leadingAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaTrailing: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var safeAreaTrailing: AnchorWrapper<NSLayoutXAxisAnchor> {
         return safeAreaGuide
             .trailingAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaLeft: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var safeAreaLeft: AnchorWrapper<NSLayoutXAxisAnchor> {
         return safeAreaGuide
             .leftAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaRight: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var safeAreaRight: AnchorWrapper<NSLayoutXAxisAnchor> {
         return safeAreaGuide
             .rightAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaTop: AnchorWapper<NSLayoutYAxisAnchor> {
+    public var safeAreaTop: AnchorWrapper<NSLayoutYAxisAnchor> {
         return safeAreaGuide
             .topAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaBottom: AnchorWapper<NSLayoutYAxisAnchor> {
+    public var safeAreaBottom: AnchorWrapper<NSLayoutYAxisAnchor> {
         return safeAreaGuide
             .bottomAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaWidth: AnchorWapper<NSLayoutDimension> {
+    public var safeAreaWidth: AnchorWrapper<NSLayoutDimension> {
         return safeAreaGuide
             .widthAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaHeight: AnchorWapper<NSLayoutDimension> {
+    public var safeAreaHeight: AnchorWrapper<NSLayoutDimension> {
         return safeAreaGuide
             .heightAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaCenterX: AnchorWapper<NSLayoutXAxisAnchor> {
+    public var safeAreaCenterX: AnchorWrapper<NSLayoutXAxisAnchor> {
         return safeAreaGuide
             .centerXAnchor
-            .anchor
+            .aw
     }
     
     @available(iOS 11.0, *)
-    public var safeAreaCenterY: AnchorWapper<NSLayoutYAxisAnchor> {
+    public var safeAreaCenterY: AnchorWrapper<NSLayoutYAxisAnchor> {
         return safeAreaGuide
             .centerYAnchor
-            .anchor
+            .aw
     }
 }
 #endif

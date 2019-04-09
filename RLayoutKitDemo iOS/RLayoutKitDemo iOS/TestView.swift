@@ -20,6 +20,8 @@ class TestView: UILabel {
         
         layer.borderColor = UIColor.black.cgColor
         layer.borderWidth = 1
+        
+        adjustsFontSizeToFitWidth = true
     }
     
     required init?(coder aDecoder: NSCoder) {

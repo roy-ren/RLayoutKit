@@ -130,6 +130,12 @@ class ViewController: UIViewController {
                         $0.height == pre.rl.height - spacing
                 }
                 
+            case 10:
+                testView
+                    .rl.layout {
+                        $0.terminal == pre.rl.terminal + CGSize(width: -spacing * 2, height: spacing)
+                        $0.size == CGSize(width: 50, height: 50)
+                }
             default:
                 break
             }

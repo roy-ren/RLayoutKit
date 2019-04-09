@@ -41,7 +41,6 @@ public struct LayoutEdge {
     }
 }
 
-#if os(iOS)
 extension LayoutEdge {
     
     public static func + (lsh: LayoutEdge, rsh: EdgeInsets) -> LayoutInsetsEdge {
@@ -58,7 +57,6 @@ extension LayoutEdge {
                                 bottom: lsh.bottom + rsh.bottom)
     }
 }
-#endif
 
 public struct LayoutInsetsEdge {
     

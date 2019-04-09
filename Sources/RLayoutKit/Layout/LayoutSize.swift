@@ -22,6 +22,27 @@ public struct LayoutSize {
 extension LayoutSize {
     
     @discardableResult
+    public static func == (lsh: LayoutSize, rsh: CGSize) -> [NSLayoutConstraint] {
+        return [lsh.width == rsh.width,
+                lsh.height == rsh.height]
+    }
+    
+    @discardableResult
+    public static func >= (lsh: LayoutSize, rsh: CGSize) -> [NSLayoutConstraint] {
+        return [lsh.width >= rsh.width,
+                lsh.height >= rsh.height]
+    }
+    
+    @discardableResult
+    public static func <= (lsh: LayoutSize, rsh: CGSize) -> [NSLayoutConstraint] {
+        return [lsh.width <= rsh.width,
+                lsh.height <= rsh.height]
+    }
+}
+
+extension LayoutSize {
+    
+    @discardableResult
     public static func == (lsh: LayoutSize, rsh: LayoutSize) -> [NSLayoutConstraint] {
         return [lsh.width == rsh.width,
                 lsh.height == rsh.height]

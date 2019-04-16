@@ -102,7 +102,7 @@ extension RLayoutKitWrapper where Base: View {
     
     // swiftlint:disable line_length
     @discardableResult
-    public func addedTo<T>(_ view: T, andLayout handler: (RLayoutKitWrapper<Base>, RLayoutKitWrapper<T>) -> Void) -> Base where T: View {
+    public func added<T>(to view: T, andLayout handler: (RLayoutKitWrapper<Base>, RLayoutKitWrapper<T>) -> Void) -> Base where T: View {
         base.addedTo(view)
         base.translatesAutoresizingMaskIntoConstraints = false
         handler(base.rl, view.rl)

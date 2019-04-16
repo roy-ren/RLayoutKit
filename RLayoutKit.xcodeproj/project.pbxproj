@@ -44,6 +44,8 @@
 		B0CF99D422354C2C00FB200E /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF99D222354C2C00FB200E /* LayoutDimension.swift */; };
 		B0F677DE2265831F00D38D5C /* ScrollViewLayoutGuideAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F677DC2265831F00D38D5C /* ScrollViewLayoutGuideAnchors.swift */; };
 		B0F677E422658CB100D38D5C /* LayoutMarginsGuideAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F677E222658CB100D38D5C /* LayoutMarginsGuideAnchors.swift */; };
+		B0F678042265E63C00D38D5C /* LayoutSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F678032265E63C00D38D5C /* LayoutSide.swift */; };
+		B0F678052265E63C00D38D5C /* LayoutSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F678032265E63C00D38D5C /* LayoutSide.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* RLayoutKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RLayoutKitTests.swift */; };
 		OBJ_41 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -82,6 +84,7 @@
 		B0CF99D222354C2C00FB200E /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
 		B0F677DC2265831F00D38D5C /* ScrollViewLayoutGuideAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewLayoutGuideAnchors.swift; sourceTree = "<group>"; };
 		B0F677E222658CB100D38D5C /* LayoutMarginsGuideAnchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutMarginsGuideAnchors.swift; sourceTree = "<group>"; };
+		B0F678032265E63C00D38D5C /* LayoutSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSide.swift; sourceTree = "<group>"; };
 		OBJ_12 /* RLayoutKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLayoutKitTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 				B082BB2B2237AB9C001B370B /* LayoutEdge.swift */,
 				B082BB2E2237ABC3001B370B /* LayoutSize.swift */,
 				B082BB342237AF30001B370B /* LayoutPoint.swift */,
+				B0F678032265E63C00D38D5C /* LayoutSide.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -375,6 +379,7 @@
 			files = (
 				B082BB302237ABC3001B370B /* LayoutSize.swift in Sources */,
 				B0F677DE2265831F00D38D5C /* ScrollViewLayoutGuideAnchors.swift in Sources */,
+				B0F678052265E63C00D38D5C /* LayoutSide.swift in Sources */,
 				B0CF99CE2235436D00FB200E /* LayoutXAxisAnchor.swift in Sources */,
 				B082BB362237AF30001B370B /* LayoutPoint.swift in Sources */,
 				B0CF99D422354C2C00FB200E /* LayoutDimension.swift in Sources */,
@@ -402,6 +407,7 @@
 				B082BAB422363ACD001B370B /* ViewAnchors.swift in Sources */,
 				B0CF99D02235439A00FB200E /* LayoutYAxisAnchor.swift in Sources */,
 				B082BB2C2237AB9C001B370B /* LayoutEdge.swift in Sources */,
+				B0F678042265E63C00D38D5C /* LayoutSide.swift in Sources */,
 				B082BB1A2236BC46001B370B /* LayoutConstrainted.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     func addScrollView() {
-        safeScrollView.rl.addedTo(view) { (scroll, superview) in
+        safeScrollView.rl.added(to: view) { (scroll, superview) in
             scroll.safeAreaEdges == superview.safeAreaEdges
         }
         
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         contentView.backgroundColor = UIColor(white: 0.85, alpha: 0.5)
         let spacing: CGFloat = 10
         
-        contentView.rl.addedTo(safeScrollView) { (background, scroll) in
+        contentView.rl.added(to: safeScrollView) { (background, scroll) in
             background.origin == scroll.contentOrigin + CGSize(width: spacing, height: spacing)
             background.size == scroll.contentSize + CGSize(width: -spacing, height: -spacing * 2)
             background.width == scroll.width - spacing * 2

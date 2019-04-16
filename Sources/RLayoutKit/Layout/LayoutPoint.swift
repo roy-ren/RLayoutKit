@@ -73,12 +73,12 @@ extension RLayoutKitWrapper where Base: View {
                            y: bottom)
     }
     
-    public var trialingTop: LayoutPoint {
+    public var trailingTop: LayoutPoint {
         return LayoutPoint(x: trailing,
                            y: top)
     }
     
-    public var trialingBottom: LayoutPoint {
+    public var trailingBottom: LayoutPoint {
         return LayoutPoint(x: trailing,
                            y: bottom)
     }
@@ -93,7 +93,7 @@ extension RLayoutKitWrapper where Base: View {
     }
     
     public var terminal: LayoutPoint {
-        return trialingBottom
+        return trailingBottom
     }
 }
 

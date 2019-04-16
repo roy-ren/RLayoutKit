@@ -134,3 +134,13 @@ extension RLayoutKitWrapper where Base: View {
                         height: height)
     }
 }
+
+#if os(iOS)
+extension RLayoutKitWrapper where Base: UIScrollView {
+    @available(iOS 11.0, *)
+    public var contentSize: LayoutSize {
+        return LayoutSize(width: contentWidth,
+                          height: contentHeight)
+    }
+}
+#endif

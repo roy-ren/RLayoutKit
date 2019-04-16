@@ -24,39 +24,58 @@ extension ViewChainable where Self: UIView {
 extension UIView: ViewChainable {}
 
 class ViewController: UIViewController {
-    let safeBackgroundView = UIView()
+    let safeScrollView = UIScrollView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .purple
         
-        safeAreaTest()
-        normalTest()
+        addScrollView()
+        addContentView()
     }
     
-    func normalTest() {
+    func addScrollView() {
+        safeScrollView.rl.addedTo(view) { (scroll, superview) in
+            scroll.safeAreaEdges == superview.safeAreaEdges
+        }
+        
+        safeScrollView.backgroundColor = .black
+    }
+    
+    func addContentView() {
+        let contentView = UIView()
+        contentView.backgroundColor = UIColor(white: 0.85, alpha: 0.5)
         let spacing: CGFloat = 10
-        let height: CGFloat = 40
+        
+        contentView.rl.addedTo(safeScrollView) { (background, scroll) in
+            background.origin == scroll.contentOrigin + CGSize(width: spacing, height: spacing)
+            background.size == scroll.contentSize + CGSize(width: -spacing, height: -spacing * 2)
+            background.width == scroll.width - spacing * 2
+        }
+        
+        addSubviews(with: contentView)
+    }
+    
+    func addSubviews(with contentView: UIView) {
+        let spacing: CGFloat = 10
+        let height: CGFloat = 100
         
         var previous: TestView?
         
         (0...10).forEach { index in
             let i = CGFloat(index)
             
-            let testView = TestView(title: "test: \(index)").added(to: self.safeBackgroundView)
-            testView.backgroundColor = UIColor(red: (i * 15 + 20).truncatingRemainder(dividingBy: 255) / 255,
-                                               green: (i * 100 + 50).truncatingRemainder(dividingBy: 255) / 255,
-                                               blue: (i * 45 + 90).truncatingRemainder(dividingBy: 255) / 255,
-                                               alpha: 1)
+            let testView = TestView(title: "test: \(index)")
+                .added(to: contentView)
             
             guard
                 let pre = previous
             else {
                 testView
                     .rl.layout {
-                        $0.leading == self.safeBackgroundView.rl.leading + spacing
-                        $0.trailing == self.safeBackgroundView.rl.trailing - spacing
-                        $0.top == self.safeBackgroundView.rl.safeAreaTop + spacing
+                        $0.leading == contentView.rl.leading + spacing
+                        $0.trailing == contentView.rl.trailing - spacing
+                        $0.top == contentView.rl.safeAreaTop + spacing
                         $0.height == height
                 }
                 
@@ -78,7 +97,7 @@ class ViewController: UIViewController {
                     .rl.layout {
                         $0.leading == pre.rl.leading
                         $0.trailing == pre.rl.trailing - spacing
-                        $0.top == pre.rl.bottom - spacing
+                        $0.top == pre.rl.bottom + spacing
                         $0.height == height
                 }
             case 3:
@@ -97,8 +116,8 @@ class ViewController: UIViewController {
             case 5:
                 testView
                     .rl.layout {
-                        $0.leading == self.safeBackgroundView.rl.leading + spacing
-                        $0.trailing == self.safeBackgroundView.rl.trailing - spacing
+                        $0.leading == contentView.rl.leading + spacing
+                        $0.trailing == contentView.rl.trailing - spacing
                         $0.top == pre.rl.bottom + spacing
                         $0.height == pre.rl.height
                 }
@@ -113,8 +132,8 @@ class ViewController: UIViewController {
             case 7:
                 testView
                     .rl.layout {
-                        $0.leadingBottom == self.safeBackgroundView.rl.leadingBottom + CGSize(width: spacing, height: -spacing)
-                        $0.trialingTop == pre.rl.trialingBottom + CGSize(width: spacing, height: spacing * 2)
+                        $0.origin == pre.rl.leadingBottom + CGSize(width: 0, height: spacing * 2)
+                        $0.size == pre.rl.size
                 }
             case 8:
                 testView
@@ -129,7 +148,6 @@ class ViewController: UIViewController {
                         $0.width == pre.rl.width * 0.4
                         $0.height == pre.rl.height - spacing
                 }
-                
             case 10:
                 testView
                     .rl.layout {
@@ -142,14 +160,9 @@ class ViewController: UIViewController {
             
             previous = testView
         }
-    }
-    
-    func safeAreaTest() {
-        safeBackgroundView.backgroundColor = .white
         
-        safeBackgroundView.added(to: view)
-            .rl.layout {
-                $0.edges == self.view.rl.safeAreaEdges
+        previous!.rl.layout {
+            $0.bottom == contentView.rl.bottom - 10
         }
     }
 }

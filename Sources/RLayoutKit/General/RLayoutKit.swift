@@ -35,6 +35,18 @@ public struct RLayoutKitWrapper<Base> {
     }
 }
 
+extension RLayoutKitWrapper where Base: View {
+    
+    /// An instance self's superView wrapped with an `RLayoutKitWapper` container
+    public var `super`: RLayoutKitWrapper<View>? {
+        guard let superview = base.superView else {
+            return nil
+        }
+        
+        return RLayoutKitWrapper<View>(superview)
+    }
+}
+
 /**
  A protocol followed by UIView or NSView
  
@@ -48,7 +60,23 @@ public struct RLayoutKitWrapper<Base> {
  */
 public protocol RLayoutCompatible {}
 
-extension View: RLayoutCompatible {}
+extension View: RLayoutCompatible {
+    var superView: View? {
+        #if os(macOS)
+        return self.superview
+        #elseif os(iOS)
+        return self.superview
+        #endif
+    }
+    
+    func addedTo(_ view: View) {
+        #if os(macOS)
+        return view.addSubview(self)
+        #elseif os(iOS)
+        return view.addSubview(self)
+        #endif
+    }
+}
 
 extension RLayoutCompatible {
     
@@ -69,6 +97,15 @@ extension RLayoutKitWrapper where Base: View {
     public func layout(_ constrainHandler: (RLayoutKitWrapper) -> Void) -> Base {
         base.translatesAutoresizingMaskIntoConstraints = false
         constrainHandler(base.rl)
+        return base
+    }
+    
+    // swiftlint:disable line_length
+    @discardableResult
+    public func addedTo<T>(_ view: T, andLayout handler: (RLayoutKitWrapper<Base>, RLayoutKitWrapper<T>) -> Void) -> Base where T: View {
+        base.addedTo(view)
+        base.translatesAutoresizingMaskIntoConstraints = false
+        handler(base.rl, view.rl)
         return base
     }
 }

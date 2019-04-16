@@ -7,13 +7,9 @@
 
 import Foundation
 
-#if os(macOS)
-import AppKit
-#elseif os(iOS)
-import UIKit
-#endif
-
 #if os(iOS)
+import UIKit
+
 extension RLayoutKitWrapper where Base: View {
     
     var marginsGuide: UILayoutGuide {

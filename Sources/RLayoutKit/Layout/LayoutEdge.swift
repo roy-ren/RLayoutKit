@@ -89,6 +89,13 @@ extension RLayoutKitWrapper where Base: View {
                           bottom: bottom)
     }
     
+    public var marginsEdges: LayoutEdge {
+        return LayoutEdge(leading: marginsLeading,
+                          trailing: marginsTrailing,
+                          top: marginsTop,
+                          bottom: marginsBottom)
+    }
+    
     #if os(iOS)
     @available(iOS 11.0, *)
     public var safeAreaEdges: LayoutEdge {
@@ -99,3 +106,23 @@ extension RLayoutKitWrapper where Base: View {
     }
     #endif
 }
+
+#if os(iOS)
+extension RLayoutKitWrapper where Base: UIScrollView {
+    @available(iOS 11.0, *)
+    public var contentLayoutEdges: LayoutEdge {
+        return LayoutEdge(leading: contentLeading,
+                          trailing: contentTrailing,
+                          top: contentTop,
+                          bottom: contentBottom)
+    }
+    
+    @available(iOS 11.0, *)
+    public var frameLayoutEdges: LayoutEdge {
+        return LayoutEdge(leading: frameLeading,
+                          trailing: frameTrailing,
+                          top: frameTop,
+                          bottom: frameBottom)
+    }
+}
+#endif

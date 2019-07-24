@@ -16,6 +16,7 @@ import UIKit
 @available(iOS 9.0, *)
 extension NSLayoutXAxisAnchor: AnchorCompatible {}
 
+@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutXAxisAnchor {
     
     @available(iOS 10.0, *)

@@ -13,8 +13,10 @@ import AppKit
 import UIKit
 #endif
 
+@available(iOS 9.0, *)
 extension NSLayoutDimension: AnchorCompatible {}
 
+@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutDimension {
     
     /* These methods return an inactive constraint of the form thisAnchor = otherAnchor.
@@ -44,6 +46,7 @@ extension AnchorWrapper where Base: NSLayoutDimension {
     }
 }
 
+@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutDimension {
     
     /* These methods return an inactive constraint of the form thisAnchor = otherAnchor + constant.
@@ -74,6 +77,7 @@ extension AnchorWrapper where Base: NSLayoutDimension {
 }
 
 // These methods return an inactive constraint of the form thisVariable = | >= | <= constant.
+@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutDimension {
     
     @discardableResult
@@ -102,6 +106,7 @@ extension AnchorWrapper where Base: NSLayoutDimension {
 }
 
 // These methods return an inactive constraint of the form thisAnchor = | >= | <= otherAnchor * multiplier.
+@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutDimension {
     
     @discardableResult

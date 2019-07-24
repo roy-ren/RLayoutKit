@@ -86,9 +86,9 @@ extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
 }
 
 #if os(iOS)
+@available(iOS 11.0, *)
 extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
     
-    @available(iOS 11.0, *)
     @discardableResult
     public static func == (lsh: AnchorWrapper,
                            rsh: FulfilledLayoutConstrainted<Base>) -> NSLayoutConstraint? {
@@ -99,7 +99,6 @@ extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
             .active
     }
     
-    @available(iOS 11.0, *)
     @discardableResult
     public static func >= (lsh: AnchorWrapper,
                            rsh: FulfilledLayoutConstrainted<Base>) -> NSLayoutConstraint {
@@ -110,7 +109,6 @@ extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
             .active
     }
     
-    @available(iOS 11.0, *)
     @discardableResult
     public static func <= (lsh: AnchorWrapper,
                            rsh: FulfilledLayoutConstrainted<Base>) -> NSLayoutConstraint {

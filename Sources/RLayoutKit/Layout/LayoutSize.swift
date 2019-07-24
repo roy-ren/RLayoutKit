@@ -13,12 +13,14 @@ import AppKit
 import UIKit
 #endif
 
+@available(iOS 9.0, *)
 public struct LayoutSize {
     
     let width: AnchorWrapper<NSLayoutDimension>
     let height: AnchorWrapper<NSLayoutDimension>
 }
 
+@available(iOS 9.0, *)
 extension LayoutSize {
     
     @discardableResult
@@ -40,6 +42,7 @@ extension LayoutSize {
     }
 }
 
+@available(iOS 9.0, *)
 extension LayoutSize {
     
     @discardableResult
@@ -61,6 +64,7 @@ extension LayoutSize {
     }
 }
 
+@available(iOS 9.0, *)
 extension LayoutSize {
     
     public static func + (lsh: LayoutSize, rsh: CGSize) -> LayoutInsetsSize {
@@ -79,12 +83,14 @@ extension LayoutSize {
     }
 }
 
+@available(iOS 9.0, *)
 public struct LayoutInsetsSize {
     
     let width: BaseLayoutConstrainted<NSLayoutDimension>
     let height: BaseLayoutConstrainted<NSLayoutDimension>
 }
 
+@available(iOS 9.0, *)
 extension LayoutInsetsSize {
     
     public static func + (lsh: LayoutInsetsSize, rsh: CGSize) -> LayoutInsetsSize {
@@ -103,12 +109,14 @@ extension LayoutInsetsSize {
     }
 }
 
+@available(iOS 9.0, *)
 public struct LayoutInsetsFulfilledSize {
     
     let width: FulfilledLayoutConstrainted<NSLayoutDimension>
     let height: FulfilledLayoutConstrainted<NSLayoutDimension>
 }
 
+@available(iOS 9.0, *)
 extension LayoutInsetsFulfilledSize {
     
     public static func + (lsh: LayoutInsetsFulfilledSize, rsh: CGSize) -> LayoutInsetsFulfilledSize {
@@ -136,8 +144,10 @@ extension RLayoutKitWrapper where Base: View {
 }
 
 #if os(iOS)
+
+@available(iOS 11.0, *)
 extension RLayoutKitWrapper where Base: UIScrollView {
-    @available(iOS 11.0, *)
+    
     public var contentSize: LayoutSize {
         return LayoutSize(width: contentWidth,
                           height: contentHeight)

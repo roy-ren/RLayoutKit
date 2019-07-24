@@ -10,6 +10,7 @@ import Foundation
 #if os(iOS)
 import UIKit
 
+@available(iOS 9.0, *)
 extension RLayoutKitWrapper where Base: View {
     
     var marginsGuide: UILayoutGuide {

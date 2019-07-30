@@ -13,7 +13,6 @@ import AppKit
 import UIKit
 #endif
 
-@available(iOS 9.0, *)
 extension RLayoutKitWrapper where Base: View {
     
     public var leading: AnchorWrapper<NSLayoutXAxisAnchor> {

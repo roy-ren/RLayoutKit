@@ -14,7 +14,7 @@ import UIKit
 #endif
 
 // swiftlint:disable identifier_name
-@available(iOS 9.0, *)
+
 public struct LayoutPoint {
     
     let x: AnchorWrapper<NSLayoutXAxisAnchor>
@@ -33,7 +33,6 @@ public struct LayoutPoint {
     }
 }
 
-@available(iOS 9.0, *)
 extension LayoutPoint {
     
     public static func + (lsh: LayoutPoint, rsh: CGSize) -> LayoutInsetsPoint {
@@ -47,7 +46,6 @@ extension LayoutPoint {
     }
 }
 
-@available(iOS 9.0, *)
 public struct LayoutInsetsPoint {
     
     let x: BaseLayoutConstrainted<NSLayoutXAxisAnchor>
@@ -64,7 +62,6 @@ public struct LayoutInsetsPoint {
     }
 }
 
-@available(iOS 9.0, *)
 extension RLayoutKitWrapper where Base: View {
     
     public var leadingTop: LayoutPoint {
@@ -102,8 +99,6 @@ extension RLayoutKitWrapper where Base: View {
 }
 
 #if os(iOS)
-
-@available(iOS 11.0, *)
 extension RLayoutKitWrapper where Base: UIScrollView {
     
     public var contentOrigin: LayoutPoint {

@@ -13,13 +13,10 @@ import AppKit
 import UIKit
 #endif
 
-@available(iOS 9.0, *)
 extension NSLayoutYAxisAnchor: AnchorCompatible {}
 
-@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
     
-    @available(iOS 10.0, *)
     @discardableResult
     public static func - (lsh: AnchorWrapper,
                           rsh: AnchorWrapper) -> AnchorWrapper<NSLayoutDimension> {
@@ -29,7 +26,6 @@ extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
     }
 }
 
-@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
     
     /* These methods return an inactive constraint of the form thisAnchor = otherAnchor.
@@ -59,7 +55,6 @@ extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
     }
 }
 
-@available(iOS 9.0, *)
 extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
     
     /* These methods return an inactive constraint of the form thisAnchor = otherAnchor + constant.
@@ -90,7 +85,6 @@ extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
 }
 
 #if os(iOS)
-@available(iOS 11.0, *)
 extension AnchorWrapper where Base: NSLayoutYAxisAnchor {
     
     @discardableResult

@@ -10,7 +10,6 @@ import UIKit
 import RLayoutKit
 
 // swiftlint:disable all
-
 protocol ViewChainable {}
 
 extension ViewChainable where Self: UIView {

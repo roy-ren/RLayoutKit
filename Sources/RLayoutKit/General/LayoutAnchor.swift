@@ -28,11 +28,24 @@ import UIKit
 public struct AnchorWrapper<Base> {
     
     public let base: Base
+    public let superAnchor: Base?
     
-    public init(_ base: Base) {
+    public init(_ base: Base, superAnchor: Base? = nil) {
         self.base = base
+        self.superAnchor = superAnchor
     }
 }
+
+//public struct AnchorWrapper<AnchorType, Anchor: NSLayoutAnchor<AnchorType>> {
+//
+//    public let anchor: Anchor
+//    public let superAnchor: Anchor?
+//
+//    public init(_ anchor: Anchor, superAnchor: Anchor? = nil) {
+//        self.anchor = anchor
+//        self.superAnchor = superAnchor
+//    }
+//}
 
 public protocol AnchorCompatible {}
 
@@ -41,7 +54,11 @@ extension AnchorCompatible {
     /// An instance of type `Self` wrapped with an `AnchorWrapper` container
     // swiftlint:disable identifier_name
     var aw: AnchorWrapper<Self> {
-        return AnchorWrapper<Self>(self)
+        return AnchorWrapper(self)
+    }
+    
+    func aw(_ superAnchor: Self?) -> AnchorWrapper<Self> {
+        return AnchorWrapper(self, superAnchor: superAnchor)
     }
 }
 
@@ -63,5 +80,42 @@ extension AnchorWrapper {
     public static func * (lsh: AnchorWrapper,
                           rsh: CGFloat) -> FulfilledLayoutConstrainted<Base> {
         return FulfilledLayoutConstrainted(anchor: lsh.base, multiplier: rsh, constant: 0)
+    }
+}
+
+public struct AnchorWrappered<AnchorType, Anchor: NSLayoutAnchor<AnchorType>> {
+    let anchor: Anchor
+    
+    init(_ anchor: Anchor) {
+        self.anchor = anchor
+    }
+}
+
+extension AnchorWrappered {
+    @discardableResult
+    public static func == (lsh: AnchorWrappered,
+                           rsh: AnchorWrappered) -> NSLayoutConstraint {
+        return lsh.anchor.constraint(equalTo: rsh.anchor)
+    }
+}
+
+protocol AnchorWrapperedable: class {}
+
+//extension AnchorWrapperedable where Self: AnyObject {
+//    var aw: AnchorWrappered<Self, NSLayoutAnchor<Self>> {
+//        return .init(self)
+//    }
+//}
+
+func test() {
+    let view = View()
+    let leading = view.leadingAnchor
+    let anchor = AnchorWrappered(leading)
+}
+
+extension RLayoutKitWrapper where Base: View {
+    
+    public var leading1: AnchorWrappered<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
+        return AnchorWrappered(base.leadingAnchor)
     }
 }

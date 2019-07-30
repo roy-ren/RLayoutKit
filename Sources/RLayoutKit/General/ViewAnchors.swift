@@ -18,72 +18,72 @@ extension RLayoutKitWrapper where Base: View {
     public var leading: AnchorWrapper<NSLayoutXAxisAnchor> {
         return base
             .leadingAnchor
-            .aw
+            .aw(base.superview?.leadingAnchor)
     }
     
     public var trailing: AnchorWrapper<NSLayoutXAxisAnchor> {
         return base
             .trailingAnchor
-            .aw
+            .aw(base.superview?.trailingAnchor)
     }
     
     public var left: AnchorWrapper<NSLayoutXAxisAnchor> {
         return base
             .leftAnchor
-            .aw
+            .aw(base.superview?.leftAnchor)
     }
     
     public var right: AnchorWrapper<NSLayoutXAxisAnchor> {
         return base
             .rightAnchor
-            .aw
+            .aw(base.superview?.rightAnchor)
     }
     
     public var top: AnchorWrapper<NSLayoutYAxisAnchor> {
         return base
             .topAnchor
-            .aw
+            .aw(base.superview?.topAnchor)
     }
     
     public var bottom: AnchorWrapper<NSLayoutYAxisAnchor> {
         return base
             .bottomAnchor
-            .aw
+            .aw(base.superview?.bottomAnchor)
     }
     
     public var width: AnchorWrapper<NSLayoutDimension> {
         return base
             .widthAnchor
-            .aw
+            .aw(base.superview?.widthAnchor)
     }
     
     public var height: AnchorWrapper<NSLayoutDimension> {
         return base
             .heightAnchor
-            .aw
+            .aw(base.superview?.widthAnchor)
     }
     
     public var centerX: AnchorWrapper<NSLayoutXAxisAnchor> {
         return base
             .centerXAnchor
-            .aw
+            .aw(base.superview?.centerXAnchor)
     }
     
     public var centerY: AnchorWrapper<NSLayoutYAxisAnchor> {
         return base
             .centerYAnchor
-            .aw
+            .aw(base.superview?.centerYAnchor)
     }
     
     public var firstBaseline: AnchorWrapper<NSLayoutYAxisAnchor> {
         return base
             .firstBaselineAnchor
-            .aw
+            .aw(base.superview?.firstBaselineAnchor)
     }
     
     public var lastBaseline: AnchorWrapper<NSLayoutYAxisAnchor> {
         return base
             .lastBaselineAnchor
-            .aw
+            .aw(base.superview?.firstBaselineAnchor)
     }
 }

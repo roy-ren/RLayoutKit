@@ -28,9 +28,9 @@ extension NSLayoutConstraint {
 
 protocol LayoutConstraintible: class {
     
-    associatedtype AnchorType
+    associatedtype Anchor
     
-    var anchor: AnchorType { get set }
+    var anchor: Anchor { get set }
     var constant: CGFloat { get set }
 }
 
@@ -53,7 +53,7 @@ extension LayoutConstraintible {
     
     @discardableResult
     public static func * (lsh: Self,
-                          rsh: CGFloat) -> FulfilledLayoutConstrainted<AnchorType> {
+                          rsh: CGFloat) -> FulfilledLayoutConstrainted<Anchor> {
         
         return FulfilledLayoutConstrainted(anchor: lsh.anchor,
                                            multiplier: rsh,
@@ -62,25 +62,25 @@ extension LayoutConstraintible {
 }
 
 /// Anchor information, an anchor with a constant
-public class BaseLayoutConstrainted<AnchorType>: LayoutConstraintible {
+public class BaseLayoutConstrainted<Anchor>: LayoutConstraintible {
     
-    var anchor: AnchorType
+    var anchor: Anchor
     var constant: CGFloat
     
-    init(anchor: AnchorType, constant: CGFloat = 0) {
+    init(anchor: Anchor, constant: CGFloat = 0) {
         self.anchor = anchor
         self.constant = constant
     }
 }
 
 /// Anchor information, an anchor with a constant and a mutiplier
-public class FulfilledLayoutConstrainted<AnchorType>: LayoutConstraintible {
+public class FulfilledLayoutConstrainted<Anchor>: LayoutConstraintible {
     
-    var anchor: AnchorType
+    var anchor: Anchor
     var constant: CGFloat
     var multiplier: CGFloat
     
-    init(anchor: AnchorType, multiplier: CGFloat = 1, constant: CGFloat = 0) {
+    init(anchor: Anchor, multiplier: CGFloat = 1, constant: CGFloat = 0) {
         self.anchor = anchor
         self.multiplier = multiplier
         self.constant = constant

@@ -17,14 +17,13 @@ public typealias EdgeInsets = UIEdgeInsets
 
 public struct LayoutEdge {
     
-    let leading: AnchorWrapper<NSLayoutXAxisAnchor>
-    let trailing: AnchorWrapper<NSLayoutXAxisAnchor>
-    let top: AnchorWrapper<NSLayoutYAxisAnchor>
-    let bottom: AnchorWrapper<NSLayoutYAxisAnchor>
+    let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
+    let trailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
+    let top: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
+    let bottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
     
     @discardableResult
     public static func == (lsh: LayoutEdge, rsh: LayoutEdge) -> [NSLayoutConstraint] {
-        
         return [lsh.leading == rsh.leading,
                 lsh.trailing == rsh.trailing,
                 lsh.top == rsh.top,
@@ -42,14 +41,14 @@ public struct LayoutEdge {
 }
 
 extension LayoutEdge {
-    
+
     public static func + (lsh: LayoutEdge, rsh: EdgeInsets) -> LayoutInsetsEdge {
         return LayoutInsetsEdge(leading: lsh.leading + rsh.left,
                                 trailing: lsh.trailing - rsh.right,
                                 top: lsh.top + rsh.top,
                                 bottom: lsh.bottom - rsh.bottom)
     }
-    
+
     public static func - (lsh: LayoutEdge, rsh: EdgeInsets) -> LayoutInsetsEdge {
         return LayoutInsetsEdge(leading: lsh.leading - rsh.left,
                                 trailing: lsh.trailing + rsh.right,
@@ -59,19 +58,19 @@ extension LayoutEdge {
 }
 
 public struct LayoutInsetsEdge {
-    
-    let leading: BaseLayoutConstrainted<NSLayoutXAxisAnchor>
-    let trailing: BaseLayoutConstrainted<NSLayoutXAxisAnchor>
-    let top: BaseLayoutConstrainted<NSLayoutYAxisAnchor>
-    let bottom: BaseLayoutConstrainted<NSLayoutYAxisAnchor>
-    
+
+    let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
+    let trailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
+    let top: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
+    let bottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
+
     public static func + (lsh: LayoutInsetsEdge, rsh: EdgeInsets) -> LayoutInsetsEdge {
         return LayoutInsetsEdge(leading: lsh.leading + rsh.left,
                                 trailing: lsh.trailing - rsh.right,
                                 top: lsh.top + rsh.top,
                                 bottom: lsh.bottom - rsh.bottom)
     }
-    
+
     public static func - (lsh: LayoutInsetsEdge, rsh: EdgeInsets) -> LayoutInsetsEdge {
         return LayoutInsetsEdge(leading: lsh.leading - rsh.left,
                                 trailing: lsh.trailing + rsh.right,
@@ -81,21 +80,21 @@ public struct LayoutInsetsEdge {
 }
 
 extension RLayoutKitWrapper where Base: View {
-    
+
     public var edges: LayoutEdge {
         return LayoutEdge(leading: leading,
                           trailing: trailing,
                           top: top,
                           bottom: bottom)
     }
-    
+
     public var marginsEdges: LayoutEdge {
         return LayoutEdge(leading: marginsLeading,
                           trailing: marginsTrailing,
                           top: marginsTop,
                           bottom: marginsBottom)
     }
-    
+
     #if os(iOS)
     public var safeAreaEdges: LayoutEdge {
         return LayoutEdge(leading: safeAreaLeading,
@@ -109,14 +108,14 @@ extension RLayoutKitWrapper where Base: View {
 #if os(iOS)
 
 extension RLayoutKitWrapper where Base: UIScrollView {
-    
+
     public var contentLayoutEdges: LayoutEdge {
         return LayoutEdge(leading: contentLeading,
                           trailing: contentTrailing,
                           top: contentTop,
                           bottom: contentBottom)
     }
-    
+
     public var frameLayoutEdges: LayoutEdge {
         return LayoutEdge(leading: frameLeading,
                           trailing: frameTrailing,

@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B069E23322F1E886000D7452 /* AnchorLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B069E23222F1E886000D7452 /* AnchorLayoutConstraint.swift */; };
+		B069E23522F1E924000D7452 /* AnchorWrapperOperatorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B069E23422F1E924000D7452 /* AnchorWrapperOperatorEx.swift */; };
+		B069E23622F1F301000D7452 /* AnchorLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B069E23222F1E886000D7452 /* AnchorLayoutConstraint.swift */; };
+		B069E23722F1F30C000D7452 /* AnchorWrapperOperatorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B069E23422F1E924000D7452 /* AnchorWrapperOperatorEx.swift */; };
 		B082BAB422363ACD001B370B /* ViewAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB322363ACD001B370B /* ViewAnchors.swift */; };
 		B082BAB522363ACD001B370B /* ViewAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB322363ACD001B370B /* ViewAnchors.swift */; };
 		B082BABB22363B69001B370B /* SafeAreaGuideAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082BAB922363B69001B370B /* SafeAreaGuideAnchors.swift */; };
@@ -70,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B069E23222F1E886000D7452 /* AnchorLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnchorLayoutConstraint.swift; path = ../../../../../../../../../System/Volumes/Data/Users/roy/site/development/kits/RLayoutKit/Sources/RLayoutKit/Core/AnchorLayoutConstraint.swift; sourceTree = "<group>"; };
+		B069E23422F1E924000D7452 /* AnchorWrapperOperatorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnchorWrapperOperatorEx.swift; path = ../../../../../../../../../System/Volumes/Data/Users/roy/site/development/kits/RLayoutKit/Sources/RLayoutKit/Core/AnchorWrapperOperatorEx.swift; sourceTree = "<group>"; };
 		B082BAB322363ACD001B370B /* ViewAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnchors.swift; sourceTree = "<group>"; };
 		B082BAB922363B69001B370B /* SafeAreaGuideAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaGuideAnchors.swift; sourceTree = "<group>"; };
 		B082BB162236A8C7001B370B /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
@@ -118,17 +124,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B082BAAF22363A29001B370B /* General */ = {
+		B082BAAF22363A29001B370B /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				B082BB1E22376AC1001B370B /* RLayoutKit.swift */,
 				B082BB162236A8C7001B370B /* LayoutAnchor.swift */,
+				B069E23422F1E924000D7452 /* AnchorWrapperOperatorEx.swift */,
+				B069E23222F1E886000D7452 /* AnchorLayoutConstraint.swift */,
 				B082BAB322363ACD001B370B /* ViewAnchors.swift */,
 				B0F677E222658CB100D38D5C /* LayoutMarginsGuideAnchors.swift */,
 				B082BAB922363B69001B370B /* SafeAreaGuideAnchors.swift */,
 				B0F677DC2265831F00D38D5C /* ScrollViewLayoutGuideAnchors.swift */,
 			);
-			path = General;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		B082BB2122376E49001B370B /* Layout */ = {
@@ -195,7 +203,7 @@
 		OBJ_8 /* RLayoutKit */ = {
 			isa = PBXGroup;
 			children = (
-				B082BAAF22363A29001B370B /* General */,
+				B082BAAF22363A29001B370B /* Core */,
 				B082BB2122376E49001B370B /* Layout */,
 			);
 			name = RLayoutKit;
@@ -383,12 +391,14 @@
 				B0CF99CE2235436D00FB200E /* LayoutXAxisAnchor.swift in Sources */,
 				B082BB362237AF30001B370B /* LayoutPoint.swift in Sources */,
 				B0CF99D422354C2C00FB200E /* LayoutDimension.swift in Sources */,
+				B069E23622F1F301000D7452 /* AnchorLayoutConstraint.swift in Sources */,
 				B082BB2022376AC1001B370B /* RLayoutKit.swift in Sources */,
 				B082BB182236A8C7001B370B /* LayoutAnchor.swift in Sources */,
 				B082BAB522363ACD001B370B /* ViewAnchors.swift in Sources */,
 				B0CF99D12235439A00FB200E /* LayoutYAxisAnchor.swift in Sources */,
 				B082BABB22363B69001B370B /* SafeAreaGuideAnchors.swift in Sources */,
 				B082BB2D2237AB9C001B370B /* LayoutEdge.swift in Sources */,
+				B069E23722F1F30C000D7452 /* AnchorWrapperOperatorEx.swift in Sources */,
 				B082BB1B2236BC46001B370B /* LayoutConstrainted.swift in Sources */,
 				B0F677E422658CB100D38D5C /* LayoutMarginsGuideAnchors.swift in Sources */,
 			);
@@ -401,12 +411,14 @@
 				B082BB2F2237ABC3001B370B /* LayoutSize.swift in Sources */,
 				B0CF99CD2235436D00FB200E /* LayoutXAxisAnchor.swift in Sources */,
 				B082BB352237AF30001B370B /* LayoutPoint.swift in Sources */,
+				B069E23522F1E924000D7452 /* AnchorWrapperOperatorEx.swift in Sources */,
 				B0CF99D322354C2C00FB200E /* LayoutDimension.swift in Sources */,
 				B082BB1F22376AC1001B370B /* RLayoutKit.swift in Sources */,
 				B082BB172236A8C7001B370B /* LayoutAnchor.swift in Sources */,
 				B082BAB422363ACD001B370B /* ViewAnchors.swift in Sources */,
 				B0CF99D02235439A00FB200E /* LayoutYAxisAnchor.swift in Sources */,
 				B082BB2C2237AB9C001B370B /* LayoutEdge.swift in Sources */,
+				B069E23322F1E886000D7452 /* AnchorLayoutConstraint.swift in Sources */,
 				B0F678042265E63C00D38D5C /* LayoutSide.swift in Sources */,
 				B082BB1A2236BC46001B370B /* LayoutConstrainted.swift in Sources */,
 			);

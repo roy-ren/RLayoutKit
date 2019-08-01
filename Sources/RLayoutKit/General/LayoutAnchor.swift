@@ -65,3 +65,67 @@ extension AnchorWrapper {
         return FulfilledLayoutConstrainted(anchor: lsh.base, multiplier: rsh, constant: 0)
     }
 }
+
+
+//struct W<A: AnyObject, B: NSLayoutAnchor<A>, A: B> {
+//
+//}
+
+protocol P {
+    associatedtype A: AnyObject
+    associatedtype B: NSLayoutAnchor<A>
+    
+    var b: B { get }
+}
+
+struct Anchor<A, B: NSLayoutAnchor<A>>: P {
+    var b: B
+}
+
+//extension P where A: NSLayoutXAxisAnchor {
+//    static func == (lsh: Self, rsh: Self) -> NSLayoutConstraint {
+//        return lsh.a.constraint(equalTo: rsh.a)
+//    }
+//}
+
+extension P {
+    static func == (lsh: Self, rsh: Self) -> NSLayoutConstraint {
+        return lsh.b.constraint(equalTo: rsh.b)
+    }
+}
+
+extension P where A == NSLayoutDimension, B == NSLayoutDimension {
+    static func == (lsh: Self, rsh: CGFloat) -> NSLayoutConstraint {
+        lsh.b.constraint(equalToConstant: rsh)
+    }
+}
+
+extension P where A == NSLayoutXAxisAnchor, B == NSLayoutXAxisAnchor {
+    static func == (lsh: Self, rsh: Self) -> NSLayoutDimension {
+        return lsh.b.anchorWithOffset(to: rsh.b)
+    }
+}
+
+func test() {
+    let view = View()
+    let anchor = Anchor(b: view.leadingAnchor)
+    let anchor2 = Anchor(b: view.leadingAnchor)
+    anchor == anchor2
+    
+    let width = Anchor(b: view.widthAnchor)
+    width == 100
+}
+
+
+
+//extension NSLayoutXAxisAnchor: P {
+////    typealias B = <#type#>
+//
+////    typealias B = NSLayoutAnchor<NSLayoutXAxisAnchor>
+//
+//    var a: NSLayoutXAxisAnchor {
+//        return self
+//    }
+//}
+
+

@@ -17,10 +17,10 @@ public typealias EdgeInsets = UIEdgeInsets
 
 public struct LayoutEdge {
     
-    let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
-    let trailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
-    let top: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
-    let bottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
+    let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor>
+    let trailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor>
+    let top: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor>
+    let bottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor>
     
     @discardableResult
     public static func == (lsh: LayoutEdge, rsh: LayoutEdge) -> [NSLayoutConstraint] {
@@ -59,10 +59,10 @@ extension LayoutEdge {
 
 public struct LayoutInsetsEdge {
 
-    let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
-    let trailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>>
-    let top: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
-    let bottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>>
+    let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor>
+    let trailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor>
+    let top: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor>
+    let bottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor>
 
     public static func + (lsh: LayoutInsetsEdge, rsh: EdgeInsets) -> LayoutInsetsEdge {
         return LayoutInsetsEdge(leading: lsh.leading + rsh.left,

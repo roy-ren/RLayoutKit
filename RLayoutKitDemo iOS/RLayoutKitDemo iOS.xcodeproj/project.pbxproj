@@ -75,10 +75,10 @@
 		B082BA7022361C2C001B370B /* RLayoutKitDemo iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B082BA7122361C2C001B370B /* AppDelegate.swift */,
 				B082BA7322361C2C001B370B /* ViewController.swift */,
-				B082BA7522361C2C001B370B /* Main.storyboard */,
 				B082BAAD22361FEC001B370B /* TestView.swift */,
+				B082BA7122361C2C001B370B /* AppDelegate.swift */,
+				B082BA7522361C2C001B370B /* Main.storyboard */,
 				B082BA7822361C2E001B370B /* Assets.xcassets */,
 				B082BA7A22361C2E001B370B /* LaunchScreen.storyboard */,
 				B082BA7D22361C2E001B370B /* Info.plist */,

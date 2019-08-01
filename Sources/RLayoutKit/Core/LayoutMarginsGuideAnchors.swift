@@ -23,52 +23,52 @@ extension RLayoutKitWrapper where Base: View {
             .layoutMarginsGuide
     }
     
-    public var marginsLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var marginsLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(base.leadingAnchor,
                      superAnchor: superMarginsGuide?.leadingAnchor)
     }
     
-    public var marginsTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var marginsTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(base.trailingAnchor,
                      superAnchor: superMarginsGuide?.trailingAnchor)
     }
     
-    public var marginsLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var marginsLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(base.leftAnchor,
                      superAnchor: superMarginsGuide?.leftAnchor)
     }
     
-    public var marginsRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var marginsRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(base.rightAnchor,
                      superAnchor: superMarginsGuide?.rightAnchor)
     }
     
-    public var marginsTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var marginsTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(base.topAnchor,
                      superAnchor: superMarginsGuide?.topAnchor)
     }
     
-    public var marginsBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var marginsBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(base.bottomAnchor,
                      superAnchor: superMarginsGuide?.bottomAnchor)
     }
     
-    public var marginsWidth: AnchorWrapper<NSLayoutDimension, NSLayoutAnchor<NSLayoutDimension>> {
+    public var marginsWidth: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
         return .init(base.widthAnchor,
                      superAnchor: superMarginsGuide?.widthAnchor)
     }
     
-    public var marginsHeight: AnchorWrapper<NSLayoutDimension, NSLayoutAnchor<NSLayoutDimension>> {
+    public var marginsHeight: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
         return .init(base.heightAnchor,
                      superAnchor: superMarginsGuide?.heightAnchor)
     }
     
-    public var marginsCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var marginsCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(base.centerXAnchor,
                      superAnchor: superMarginsGuide?.centerXAnchor)
     }
     
-    public var marginsCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var marginsCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(base.centerYAnchor,
                      superAnchor: superMarginsGuide?.centerYAnchor)
     }

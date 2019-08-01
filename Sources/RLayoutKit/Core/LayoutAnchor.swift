@@ -25,14 +25,18 @@ import UIKit
  let anAnchorWrapper: AnchorWrapper<NSLayoutXAxisAnchor> = view.leadingAnchor.anchor
  ````
  */
-public struct AnchorWrapper<AnchorType: AnyObject, Anchor: NSLayoutAnchor<AnchorType>> {
+public struct AnchorWrapper<A, Anchor: NSLayoutAnchor<A>> {
 
     public let anchor: Anchor
     public let superAnchor: Anchor?
     public var constant: CGFloat?
     public var multiplier: CGFloat?
     
-    public init(_ anchor: Anchor, superAnchor: Anchor? = nil, constant: CGFloat? = nil, multiplier: CGFloat? = nil) {
+    public init(_ anchor: Anchor,
+                superAnchor: Anchor? = nil,
+                constant: CGFloat? = nil,
+                multiplier: CGFloat? = nil) {
+        
         self.anchor = anchor
         self.superAnchor = superAnchor
         self.constant = constant
@@ -40,15 +44,30 @@ public struct AnchorWrapper<AnchorType: AnyObject, Anchor: NSLayoutAnchor<Anchor
     }
 }
 
-extension NSLayoutConstraint {
-    
-    public var active: NSLayoutConstraint {
-        isActive = true
-        return self
+extension AnchorWrapper {
+    public static func + (lsh: AnchorWrapper,
+                          rsh: CGFloat) -> AnchorWrapper {
+        
+        var wrapper = lsh
+        wrapper.constant = (lsh.constant ?? 0) + rsh
+        return wrapper
     }
     
-    public var inactive: NSLayoutConstraint {
-        isActive = false
-        return self
+    @discardableResult
+    public static func - (lsh: AnchorWrapper,
+                          rsh: CGFloat) -> AnchorWrapper {
+        
+        var wrapper = lsh
+        wrapper.constant = (lsh.constant ?? 0) - rsh
+        return wrapper
+    }
+    
+    @discardableResult
+    public static func * (lsh: AnchorWrapper,
+                          rsh: CGFloat) -> AnchorWrapper {
+        
+        var anchorWrapper = lsh
+        anchorWrapper.multiplier = (lsh.multiplier ?? 1) * rsh
+        return lsh
     }
 }

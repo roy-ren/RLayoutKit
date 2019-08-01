@@ -18,43 +18,43 @@ extension RLayoutKitWrapper where Base: UIScrollView {
             .contentLayoutGuide
     }
     
-    public var contentLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var contentLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(contentLayoutGuide.leadingAnchor)
     }
     
-    public var contentTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var contentTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(contentLayoutGuide.trailingAnchor)
     }
     
-    public var contentLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var contentLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(contentLayoutGuide.leftAnchor)
     }
     
-    public var contentRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var contentRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(contentLayoutGuide.rightAnchor)
     }
     
-    public var contentTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var contentTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(contentLayoutGuide.topAnchor)
     }
     
-    public var contentBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var contentBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(contentLayoutGuide.bottomAnchor)
     }
     
-    public var contentWidth: AnchorWrapper<NSLayoutDimension, NSLayoutAnchor<NSLayoutDimension>> {
+    public var contentWidth: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
         return .init(contentLayoutGuide.widthAnchor)
     }
     
-    public var contentHeight: AnchorWrapper<NSLayoutDimension, NSLayoutAnchor<NSLayoutDimension>> {
+    public var contentHeight: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
         return .init(contentLayoutGuide.heightAnchor)
     }
     
-    public var contentCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var contentCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(contentLayoutGuide.centerXAnchor)
     }
     
-    public var contentCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var contentCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(contentLayoutGuide.centerYAnchor)
     }
 }
@@ -67,43 +67,43 @@ extension RLayoutKitWrapper where Base: UIScrollView {
             .frameLayoutGuide
     }
     
-    public var frameLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var frameLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(frameLayoutGuide.leadingAnchor)
     }
     
-    public var frameTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var frameTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(frameLayoutGuide.trailingAnchor)
     }
     
-    public var frameLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var frameLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(frameLayoutGuide.leftAnchor)
     }
     
-    public var frameRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var frameRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(frameLayoutGuide.rightAnchor)
     }
     
-    public var frameTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var frameTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(frameLayoutGuide.topAnchor)
     }
     
-    public var frameBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var frameBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(frameLayoutGuide.bottomAnchor)
     }
     
-    public var frameWidth: AnchorWrapper<NSLayoutDimension, NSLayoutAnchor<NSLayoutDimension>> {
+    public var frameWidth: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
         return .init(frameLayoutGuide.widthAnchor)
     }
     
-    public var frameHeight: AnchorWrapper<NSLayoutDimension, NSLayoutAnchor<NSLayoutDimension>> {
+    public var frameHeight: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
         return .init(frameLayoutGuide.heightAnchor)
     }
     
-    public var frameCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutAnchor<NSLayoutXAxisAnchor>> {
+    public var frameCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
         return .init(frameLayoutGuide.centerXAnchor)
     }
     
-    public var frameCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutAnchor<NSLayoutYAxisAnchor>> {
+    public var frameCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
         return .init(frameLayoutGuide.centerYAnchor)
     }
 }

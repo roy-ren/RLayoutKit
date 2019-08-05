@@ -137,8 +137,9 @@ class ViewController: UIViewController {
             case 8:
                 testView
                     .rl.layout {
-                        $0.size == pre.rl.size * 0.69
-                        $0.center == pre.rl.center
+                        $0.size == pre.rl.size * 0.9
+                        $0.centerX == pre.rl.centerX
+                        $0.centerY == pre.rl.bottom
                 }
             case 9:
                 testView

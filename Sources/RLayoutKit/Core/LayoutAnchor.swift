@@ -66,8 +66,8 @@ extension AnchorWrapper {
     public static func * (lsh: AnchorWrapper,
                           rsh: CGFloat) -> AnchorWrapper {
         
-        var anchorWrapper = lsh
-        anchorWrapper.multiplier = (lsh.multiplier ?? 1) * rsh
-        return lsh
+        var wrapper = lsh
+        wrapper.multiplier = (lsh.multiplier ?? 1) * rsh
+        return wrapper
     }
 }

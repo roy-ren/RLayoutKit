@@ -39,18 +39,21 @@ extension AnchorWrapper {
     @discardableResult
     public static func == (lsh: AnchorWrapper,
                            rsh: AnchorWrapper) -> NSLayoutConstraint {
-        
+        #if os(iOS)
         switch (rsh.multiplier, rsh.constant) {
         case (.some, _):
             return lsh ==* rsh
         case (.none, .some):
             return lsh ==+ rsh
         default:
-            return lsh
-                .anchor
-                .constraint(equalTo: rsh.anchor)
-                .active
+            break
         }
+        #endif
+        
+        return lsh
+            .anchor
+            .constraint(equalTo: rsh.anchor)
+            .active
     }
     
     static func ==+ (lsh: AnchorWrapper,
@@ -62,6 +65,7 @@ extension AnchorWrapper {
             .active
     }
     
+    #if os(iOS)
     static func ==* (lsh: AnchorWrapper,
                      rsh: AnchorWrapper) -> NSLayoutConstraint {
         
@@ -89,6 +93,7 @@ extension AnchorWrapper {
                 .active
         }
     }
+    #endif
 }
 
 // MARK: - greaterThanOrEqualTo E.g: >=
@@ -96,17 +101,21 @@ extension AnchorWrapper {
     @discardableResult
     public static func >= (lsh: AnchorWrapper,
                            rsh: AnchorWrapper) -> NSLayoutConstraint {
+        #if os(iOS)
         switch (rsh.multiplier, rsh.constant) {
         case (.some, _):
             return lsh >=* rsh
         case (.none, .some):
             return lsh >=+ rsh
         default:
-            return lsh
-                .anchor
-                .constraint(greaterThanOrEqualTo: rsh.anchor)
-                .active
+            break
         }
+        #endif
+        
+        return lsh
+            .anchor
+            .constraint(greaterThanOrEqualTo: rsh.anchor)
+            .active
     }
     
     static func >=+ (lsh: AnchorWrapper,
@@ -118,6 +127,7 @@ extension AnchorWrapper {
             .active
     }
     
+    #if os(iOS)
     static func >=* (lsh: AnchorWrapper,
                      rsh: AnchorWrapper) -> NSLayoutConstraint {
         
@@ -145,6 +155,7 @@ extension AnchorWrapper {
                 .active
         }
     }
+    #endif
 }
 
 // MARK: - lessThanOrEqualTo E.g: <=
@@ -152,18 +163,21 @@ extension AnchorWrapper {
     @discardableResult
     public static func <= (lsh: AnchorWrapper,
                            rsh: AnchorWrapper) -> NSLayoutConstraint {
-        
+        #if os(iOS)
         switch (rsh.multiplier, rsh.constant) {
         case (.some, _):
             return lsh <=* rsh
         case (.none, .some):
             return lsh <=+ rsh
         default:
-            return lsh
-                .anchor
-                .constraint(lessThanOrEqualTo: rsh.anchor)
-                .active
+            break
         }
+        #endif
+        
+        return lsh
+            .anchor
+            .constraint(lessThanOrEqualTo: rsh.anchor)
+            .active
     }
     
     static func <=+ (lsh: AnchorWrapper,
@@ -175,6 +189,7 @@ extension AnchorWrapper {
             .active
     }
     
+    #if os(iOS)
     static func <=* (lsh: AnchorWrapper,
                      rsh: AnchorWrapper) -> NSLayoutConstraint {
         
@@ -202,6 +217,7 @@ extension AnchorWrapper {
                 .active
         }
     }
+    #endif
 }
 
 extension AnchorWrapper where A == NSLayoutYAxisAnchor, Anchor == NSLayoutYAxisAnchor {

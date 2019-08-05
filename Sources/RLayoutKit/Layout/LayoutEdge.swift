@@ -88,6 +88,7 @@ extension RLayoutKitWrapper where Base: View {
                           bottom: bottom)
     }
 
+    #if os(iOS)
     public var marginsEdges: LayoutEdge {
         return LayoutEdge(leading: marginsLeading,
                           trailing: marginsTrailing,
@@ -95,7 +96,6 @@ extension RLayoutKitWrapper where Base: View {
                           bottom: marginsBottom)
     }
 
-    #if os(iOS)
     public var safeAreaEdges: LayoutEdge {
         return LayoutEdge(leading: safeAreaLeading,
                           trailing: safeAreaTrailing,

@@ -13,6 +13,7 @@ import AppKit
 import UIKit
 #endif
 
+@available(iOS 9.0, *)
 public struct LayoutSize {
     
     let width: AnchorWrapper<NSLayoutDimension, NSLayoutDimension>
@@ -20,6 +21,7 @@ public struct LayoutSize {
 }
 
 // MARK: - Caculate
+@available(iOS 9.0, *)
 extension LayoutSize {
     public static func + (lsh: LayoutSize, rsh: CGSize) -> LayoutSize {
         return LayoutSize(width: lsh.width + rsh.width,
@@ -38,6 +40,7 @@ extension LayoutSize {
 }
 
 // MARK: - Set to CGSize
+@available(iOS 9.0, *)
 extension LayoutSize {
     
     @discardableResult
@@ -60,6 +63,7 @@ extension LayoutSize {
 }
 
 // MARK: - Set to LayoutSize
+@available(iOS 9.0, *)
 extension LayoutSize {
     @discardableResult
     public static func == (lsh: LayoutSize, rsh: LayoutSize) -> [NSLayoutConstraint] {
@@ -80,6 +84,7 @@ extension LayoutSize {
     }
 }
 
+@available(iOS 9.0, *)
 extension RLayoutKitWrapper where Base: View {
 
     public var size: LayoutSize {

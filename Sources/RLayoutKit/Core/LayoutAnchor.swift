@@ -25,6 +25,7 @@ import UIKit
  let anAnchorWrapper: AnchorWrapper<NSLayoutXAxisAnchor> = view.leadingAnchor.anchor
  ````
  */
+@available(iOS 9.0, *)
 public struct AnchorWrapper<A, Anchor: NSLayoutAnchor<A>> {
 
     public let anchor: Anchor
@@ -44,6 +45,7 @@ public struct AnchorWrapper<A, Anchor: NSLayoutAnchor<A>> {
     }
 }
 
+@available(iOS 9.0, *)
 extension AnchorWrapper {
     public static func + (lsh: AnchorWrapper,
                           rsh: CGFloat) -> AnchorWrapper {

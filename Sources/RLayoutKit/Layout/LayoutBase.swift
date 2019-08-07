@@ -35,6 +35,7 @@ extension NSLayoutConstraint {
 
 // MARK: - Commont Constraint, equalTo: E.g: ==
 // swiftlint:disable all
+@available(iOS 9.0, *)
 extension AnchorWrapper {
     @discardableResult
     public static func == (lsh: AnchorWrapper,
@@ -101,6 +102,7 @@ extension AnchorWrapper {
 }
 
 // MARK: - greaterThanOrEqualTo E.g: >=
+@available(iOS 9.0, *)
 extension AnchorWrapper {
     @discardableResult
     public static func >= (lsh: AnchorWrapper,
@@ -166,6 +168,7 @@ extension AnchorWrapper {
 }
 
 // MARK: - lessThanOrEqualTo E.g: <=
+@available(iOS 9.0, *)
 extension AnchorWrapper {
     @discardableResult
     public static func <= (lsh: AnchorWrapper,
@@ -248,6 +251,7 @@ extension AnchorWrapper where A == NSLayoutXAxisAnchor, Anchor == NSLayoutXAxisA
     }
 }
 
+@available(iOS 9.0, *)
 extension AnchorWrapper where A == NSLayoutDimension, Anchor == NSLayoutDimension {
     @discardableResult
     public static func == (lsh: AnchorWrapper, rsh: CGFloat) -> NSLayoutConstraint {

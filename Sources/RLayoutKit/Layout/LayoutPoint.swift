@@ -14,13 +14,14 @@ import UIKit
 #endif
 
 // swiftlint:disable identifier_name
-
+@available(iOS 9.0, *)
 public struct LayoutPoint {
     
     let x: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor>
     let y: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor>
 }
 
+@available(iOS 9.0, *)
 extension LayoutPoint {
     
     public static func + (lsh: LayoutPoint, rsh: CGSize) -> LayoutPoint {
@@ -34,6 +35,7 @@ extension LayoutPoint {
     }
 }
 
+@available(iOS 9.0, *)
 extension LayoutPoint {
     
     @discardableResult
@@ -43,6 +45,7 @@ extension LayoutPoint {
     }
 }
 
+@available(iOS 9.0, *)
 extension RLayoutKitWrapper where Base: View {
     
     public var leadingTop: LayoutPoint {

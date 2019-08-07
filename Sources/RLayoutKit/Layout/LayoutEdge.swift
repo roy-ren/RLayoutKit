@@ -15,6 +15,7 @@ import UIKit
 public typealias EdgeInsets = UIEdgeInsets
 #endif
 
+@available(iOS 9.0, *)
 public struct LayoutEdge {
     
     let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor>
@@ -40,6 +41,7 @@ public struct LayoutEdge {
     }
 }
 
+@available(iOS 9.0, *)
 extension LayoutEdge {
 
     public static func + (lsh: LayoutEdge, rsh: EdgeInsets) -> LayoutInsetsEdge {
@@ -57,6 +59,7 @@ extension LayoutEdge {
     }
 }
 
+@available(iOS 9.0, *)
 public struct LayoutInsetsEdge {
 
     let leading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor>
@@ -79,6 +82,7 @@ public struct LayoutInsetsEdge {
     }
 }
 
+@available(iOS 9.0, *)
 extension RLayoutKitWrapper where Base: View {
 
     public var edges: LayoutEdge {

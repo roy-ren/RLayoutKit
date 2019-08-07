@@ -82,6 +82,7 @@ extension RLayoutKitWrapper where Base: View {
 #if os(iOS)
 extension RLayoutKitWrapper where Base: UIScrollView {
     
+    @available(iOS 11.0, *)
     public var contentOrigin: LayoutPoint {
         return LayoutPoint(x: contentLeading,
                            y: contentTop)

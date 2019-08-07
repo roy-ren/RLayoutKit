@@ -96,6 +96,7 @@ extension RLayoutKitWrapper where Base: View {
                           bottom: marginsBottom)
     }
 
+    @available(iOS 11.0, *)
     public var safeAreaEdges: LayoutEdge {
         return LayoutEdge(leading: safeAreaLeading,
                           trailing: safeAreaTrailing,
@@ -107,6 +108,7 @@ extension RLayoutKitWrapper where Base: View {
 
 #if os(iOS)
 
+@available(iOS 11.0, *)
 extension RLayoutKitWrapper where Base: UIScrollView {
 
     public var contentLayoutEdges: LayoutEdge {

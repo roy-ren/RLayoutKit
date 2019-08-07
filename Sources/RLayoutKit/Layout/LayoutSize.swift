@@ -92,6 +92,7 @@ extension RLayoutKitWrapper where Base: View {
 
 extension RLayoutKitWrapper where Base: UIScrollView {
 
+    @available(iOS 11.0, *)
     public var contentSize: LayoutSize {
         return LayoutSize(width: contentWidth,
                           height: contentHeight)

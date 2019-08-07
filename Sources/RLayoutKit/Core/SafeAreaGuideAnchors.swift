@@ -10,6 +10,7 @@ import Foundation
 #if os(iOS)
 import UIKit
 
+@available(iOS 11.0, *)
 extension RLayoutKitWrapper where Base: View {
     
     public var safeAreaGuide: UILayoutGuide {

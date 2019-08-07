@@ -11,6 +11,7 @@ import Foundation
 import UIKit
 
 // MARK: - contentLayoutGuide
+@available(iOS 11.0, *)
 extension RLayoutKitWrapper where Base: UIScrollView {
     
     var contentLayoutGuide: UILayoutGuide {
@@ -60,6 +61,7 @@ extension RLayoutKitWrapper where Base: UIScrollView {
 }
 
 // MARK: - frameLayoutGuide
+@available(iOS 11.0, *)
 extension RLayoutKitWrapper where Base: UIScrollView {
     
     public var frameLayoutGuide: UILayoutGuide {

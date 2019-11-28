@@ -20,6 +20,20 @@
                ReferencedContainer = "container:RLayoutKitDemo iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B0CF99BA22350F3E00FB200E"
+               BuildableName = "RLayoutKit.framework"
+               BlueprintName = "RLayoutKit-iOS"
+               ReferencedContainer = "container:../RLayoutKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

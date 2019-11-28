@@ -20,43 +20,43 @@ extension RLayoutKitWrapper where Base: UIScrollView {
     }
     
     public var contentLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(contentLayoutGuide.leadingAnchor)
+        return .init(anchor: contentLayoutGuide.leadingAnchor)
     }
     
     public var contentTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(contentLayoutGuide.trailingAnchor)
+        return .init(anchor: contentLayoutGuide.trailingAnchor)
     }
     
     public var contentLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(contentLayoutGuide.leftAnchor)
+        return .init(anchor: contentLayoutGuide.leftAnchor)
     }
     
     public var contentRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(contentLayoutGuide.rightAnchor)
+        return .init(anchor: contentLayoutGuide.rightAnchor)
     }
     
     public var contentTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
-        return .init(contentLayoutGuide.topAnchor)
+        return .init(anchor: contentLayoutGuide.topAnchor)
     }
     
     public var contentBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
-        return .init(contentLayoutGuide.bottomAnchor)
+        return .init(anchor: contentLayoutGuide.bottomAnchor)
     }
     
     public var contentWidth: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
-        return .init(contentLayoutGuide.widthAnchor)
+        return .init(anchor: contentLayoutGuide.widthAnchor)
     }
     
     public var contentHeight: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
-        return .init(contentLayoutGuide.heightAnchor)
+        return .init(anchor: contentLayoutGuide.heightAnchor)
     }
     
     public var contentCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(contentLayoutGuide.centerXAnchor)
+        return .init(anchor: contentLayoutGuide.centerXAnchor)
     }
     
     public var contentCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
-        return .init(contentLayoutGuide.centerYAnchor)
+        return .init(anchor: contentLayoutGuide.centerYAnchor)
     }
 }
 
@@ -70,43 +70,43 @@ extension RLayoutKitWrapper where Base: UIScrollView {
     }
     
     public var frameLeading: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(frameLayoutGuide.leadingAnchor)
+        return .init(anchor: frameLayoutGuide.leadingAnchor)
     }
     
     public var frameTrailing: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(frameLayoutGuide.trailingAnchor)
+        return .init(anchor: frameLayoutGuide.trailingAnchor)
     }
     
     public var frameLeft: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(frameLayoutGuide.leftAnchor)
+        return .init(anchor: frameLayoutGuide.leftAnchor)
     }
     
     public var frameRight: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(frameLayoutGuide.rightAnchor)
+        return .init(anchor: frameLayoutGuide.rightAnchor)
     }
     
     public var frameTop: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
-        return .init(frameLayoutGuide.topAnchor)
+        return .init(anchor: frameLayoutGuide.topAnchor)
     }
     
     public var frameBottom: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
-        return .init(frameLayoutGuide.bottomAnchor)
+        return .init(anchor: frameLayoutGuide.bottomAnchor)
     }
     
     public var frameWidth: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
-        return .init(frameLayoutGuide.widthAnchor)
+        return .init(anchor: frameLayoutGuide.widthAnchor)
     }
     
     public var frameHeight: AnchorWrapper<NSLayoutDimension, NSLayoutDimension> {
-        return .init(frameLayoutGuide.heightAnchor)
+        return .init(anchor: frameLayoutGuide.heightAnchor)
     }
     
     public var frameCenterX: AnchorWrapper<NSLayoutXAxisAnchor, NSLayoutXAxisAnchor> {
-        return .init(frameLayoutGuide.centerXAnchor)
+        return .init(anchor: frameLayoutGuide.centerXAnchor)
     }
     
     public var frameCenterY: AnchorWrapper<NSLayoutYAxisAnchor, NSLayoutYAxisAnchor> {
-        return .init(frameLayoutGuide.centerYAnchor)
+        return .init(anchor: frameLayoutGuide.centerYAnchor)
     }
 }
 

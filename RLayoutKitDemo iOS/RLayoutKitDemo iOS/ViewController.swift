@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         
         var previous: TestView?
         
-        (0...10).forEach { index in
+        (0...11).forEach { index in
             let i = CGFloat(index)
             
             let testView = TestView(title: "test: \(index)")
@@ -72,9 +72,9 @@ class ViewController: UIViewController {
             else {
                 testView
                     .rl.layout {
-                        $0.leading == contentView.rl.leading + spacing
-                        $0.trailing == contentView.rl.trailing - spacing
-                        $0.top == contentView.rl.safeAreaTop + spacing
+                        $0.leading == spacing
+                        $0.trailing == -spacing
+                        $0.top == spacing
                         $0.height == height
                 }
                 
@@ -152,8 +152,15 @@ class ViewController: UIViewController {
                 testView
                     .rl.layout {
                         $0.terminal == pre.rl.terminal + CGSize(width: -spacing * 2, height: spacing)
-                        $0.size == CGSize(width: 50, height: 50)
+                        $0.size == CGSize(width: 100, height: 50)
                 }
+			case 11:
+				testView
+					.rl.layout {
+						$0.top == pre.rl.bottom + spacing
+						$0.leading == spacing
+						$0.size == CGSize(width: 200, height: 200)
+				}
             default:
                 break
             }

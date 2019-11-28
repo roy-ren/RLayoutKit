@@ -227,6 +227,7 @@ extension AnchorWrapper {
 	#endif
 }
 
+@available(iOS 9.0, *)
 extension AnchorWrapper where A == NSLayoutYAxisAnchor, Anchor == NSLayoutYAxisAnchor {
 	
 	@available(iOS 10.0, *)
@@ -249,6 +250,7 @@ extension AnchorWrapper where A == NSLayoutYAxisAnchor, Anchor == NSLayoutYAxisA
 	}
 }
 
+@available(iOS 9.0, *)
 extension AnchorWrapper where A == NSLayoutXAxisAnchor, Anchor == NSLayoutXAxisAnchor {
 	
 	@available(iOS 10.0, *)
@@ -269,12 +271,6 @@ extension AnchorWrapper where A == NSLayoutXAxisAnchor, Anchor == NSLayoutXAxisA
 			.constraint(equalTo: superAnchor, constant: rsh)
 			.active
 	}
-}
-
-func test() {
-	let view = UIView()
-//	view.rl.width == 100
-	view.rl.leading == 100
 }
 
 @available(iOS 9.0, *)
